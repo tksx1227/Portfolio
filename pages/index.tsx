@@ -4,6 +4,8 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import { Layout } from '../components/layout'
 
+import { IconWithName } from "../components/iconWithName"
+
 export default function Home() {
   return (
     <>
@@ -11,16 +13,8 @@ export default function Home() {
         <title>Home</title>
       </Head>
       <Layout>
+        <IconWithName />
         <h1>Home</h1>
-        <Link href="/">
-          <a>home </a>
-        </Link>
-        <Link href="/about">
-          <a>about </a>
-        </Link>
-        <Link href="/works">
-          <a>works</a>
-        </Link>
       </Layout>
     </>
   )
