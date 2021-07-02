@@ -1,5 +1,5 @@
 import { Header } from "./header"
-import { Container, Box } from "@chakra-ui/react"
+import { Container } from "@chakra-ui/react"
 
 type Props = {
   children: React.ReactNode
@@ -10,10 +10,8 @@ export const Layout = (props: Props) => {
   return (
     <>
       <Header />
-      <Container maxW="container.lg" as="main" borderWidth="1px">
-        <Box w="100%" p="md" borderRadius="lg" boxShadow="sm">
+      <Container maxW="container.lg" as="main" borderWidth="2px">
           {children}
-        </Box>
       </Container>
     </>
   )

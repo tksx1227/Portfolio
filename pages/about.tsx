@@ -10,7 +10,7 @@ const About = () => {
         <title>About</title>
       </Head>
       <Layout>
-        <IconWithName home />
+        <IconWithName />
         <h1>About</h1>
       </Layout>
     </>
