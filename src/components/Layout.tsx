@@ -7,7 +7,7 @@ export const Layout = (props: { children: ReactNode }) => {
   return (
     <div className={"font-mono text-gray600"}>
       <Header />
-      <main className={"px-16"}>{props.children}</main>
+      <main className={"pt-16 pb-28 px-16"}>{props.children}</main>
       <Footer />
     </div>
   );

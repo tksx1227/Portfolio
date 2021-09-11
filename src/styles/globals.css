@@ -20,12 +20,17 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  background-image: url(/background.png);
+  background-size: contain;
+}
+
 .glass-container {
   gap: 20px;
   border-radius: 10px;
   backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: rgba(0, 0, 0, 0.5) 2px 8px 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 4px 8px;
   border: 1px rgba(255, 255, 255, 0.3) solid;
   border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
   border-right: 2px rgba(40, 40, 40, 0.35) solid;

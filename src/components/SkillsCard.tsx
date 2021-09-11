@@ -20,13 +20,14 @@ export const SkillsCard = (props: Props) => {
 
   return (
     <div className={isLastItem ? "" : "mb-6"}>
-      <p
-        className={
-          "font-bold text-xl text-indigo-900 tracking-wide pb-2 border-b-2"
-        }
-      >
+      <p className={"font-bold text-xl text-indigo-900 tracking-wide pb-2"}>
         {title}
       </p>
+      <div
+        className={
+          "h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300"
+        }
+      ></div>
       <p className={"text-lg tracking-widest font-semibold mt-4"}>
         ある程度使える
       </p>

@@ -15,7 +15,7 @@ export const Products = () => {
             <Image
               src="/product_images/morning-to-do.png"
               alt="Morning to do"
-              className={"border-2 opacity-80"}
+              className={"border-2"}
               objectFit="cover"
               width={1920}
               height={1080}
@@ -55,7 +55,7 @@ export const Products = () => {
             <Image
               src="/product_images/morning-to-do.png"
               alt="Morning to do"
-              className={"border-2 opacity-80"}
+              className={"border-2"}
               objectFit="cover"
               width={1920}
               height={1080}
@@ -65,7 +65,7 @@ export const Products = () => {
         <div className={"mt-24 text-center"}>
           <button
             className={
-              "shadow-lg px-16 py-4 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white"
+              "shadow-xl px-16 py-4 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white"
             }
           >
             もっと見る
