@@ -2,16 +2,20 @@ import Image from "next/image";
 
 export const Profile = () => {
   return (
-    <section id="profile" className={"mt-36"}>
+    <section id="profile" className={"mt-24 lg:mt-36"}>
       <div>
         <p className={"text-indigo-800 text-lg font-semibold"}>PROFILE</p>
-        <h2 className={"text-gray-600 text-3xl font-bold tracking-wider"}>
+        <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl"}>
           プロフィール
         </h2>
       </div>
-      <div className={"glass-container p-10 mt-8"}>
-        <div className={"flex flex-row space-x-10"}>
-          <div className={"flex-shrink-0"}>
+      <div className={"glass-container mt-8 py-10 px-6 lg:px-10"}>
+        <div
+          className={
+            "flex flex-col lg:flex-row lg:justify-around lg:space-x-10"
+          }
+        >
+          <div className={"flex-shrink-0 text-center"}>
             <Image
               src="/icon.jpg"
               alt="Profile Icon"
@@ -24,7 +28,11 @@ export const Profile = () => {
             >
               TOMORI
             </p>
-            <div className={"flex flex-row justify-around mt-4"}>
+            <div
+              className={
+                "flex flex-row justify-center space-x-6 my-6 lg:space-x-0 lg:justify-around lg:mb-0"
+              }
+            >
               <div>
                 <a
                   href="https://github.com/tksx1227"
@@ -97,15 +105,15 @@ export const Profile = () => {
               </div>
             </div>
           </div>
-          <div className={"border border-gray-200"}></div>
+          <div className={"border border-gray-300 mb-6 lg:mb-0"}></div>
           <div>
-            <p className={"font-medium leading-relaxed"}>
+            <p className={"text-sm leading-relaxed lg:text-base"}>
               地方の情報系大学に通う大学3年生
               <br />
               <br />
               幼い頃からモノづくりが好きで、親から工学系に進むといいと吹き込まれる。
               <br />
-              中学時代にインターネットにハマり、この頃辺りから情報系の分野に興味を持つ。
+              中学時代にインターネットにハマり、この頃辺りからハードよりソフト寄りの分野に興味を持つ。
               <br />
               <br />
               大学は情報系の学部へ進路を決定し、入学後初めてプログラミング（C言語）に触れる。

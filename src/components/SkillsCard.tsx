@@ -35,7 +35,7 @@ export const SkillsCard = (props: Props) => {
         {logoList.available.map(({ src, alt }) => {
           return (
             <div className={"m-3"} key={alt}>
-              <div className="hidden pointer-events-none select-none lg:block">
+              <div>
                 <Image src={src} alt={alt} width="80" height="80"></Image>
               </div>
             </div>
@@ -47,7 +47,7 @@ export const SkillsCard = (props: Props) => {
         {logoList.learning.map(({ src, alt }) => {
           return (
             <div className={"m-3"} key={alt}>
-              <div className="hidden pointer-events-none select-none lg:block">
+              <div>
                 <Image src={src} alt={alt} width="80" height="80"></Image>
               </div>
             </div>

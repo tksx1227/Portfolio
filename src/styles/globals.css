@@ -9,6 +9,7 @@ body {
   color: #333333;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -28,7 +29,7 @@ main {
 .glass-container {
   gap: 20px;
   border-radius: 10px;
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(3px);
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: rgba(0, 0, 0, 0.2) 1px 4px 8px;
   border: 1px rgba(255, 255, 255, 0.3) solid;
