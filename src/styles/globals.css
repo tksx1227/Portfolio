@@ -30,3 +30,34 @@ a {
   border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
   border-right: 2px rgba(40, 40, 40, 0.35) solid;
 }
+
+.under-bar {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.under-bar::before,
+.under-bar::after {
+  border-bottom: solid 2px #6366f1;
+  bottom: 0;
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  width: 0;
+}
+
+.under-bar::before {
+  left: 50%;
+}
+
+.under-bar::after {
+  right: 50%;
+}
+
+.under-bar:hover::before,
+.under-bar:hover::after {
+  width: 50%;
+}
