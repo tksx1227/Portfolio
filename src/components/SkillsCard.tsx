@@ -20,9 +20,9 @@ export const SkillsCard = (props: Props) => {
 
   return (
     <div className={isLastItem ? "" : "mb-12"}>
-      <p className={"font-bold text-xl text-indigo-900 tracking-wide pb-2"}>
+      <h3 className={"font-bold text-xl text-indigo-900 tracking-wide pb-2"}>
         {title}
-      </p>
+      </h3>
       <div
         className={
           "h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300"
@@ -34,9 +34,12 @@ export const SkillsCard = (props: Props) => {
       <div className={"flex flex-wrap mb-8"}>
         {logoList.available.map(({ src, alt }) => {
           return (
-            <div className={"m-3"} key={alt}>
-              <div>
+            <div className="m-3" key={alt}>
+              <div className="hidden select-none md:block">
                 <Image src={src} alt={alt} width="80" height="80"></Image>
+              </div>
+              <div className="block select-none md:hidden">
+                <Image src={src} alt={alt} width="50" height="50"></Image>
               </div>
             </div>
           );
@@ -46,9 +49,12 @@ export const SkillsCard = (props: Props) => {
       <div className={"flex flex-wrap mb-8"}>
         {logoList.learning.map(({ src, alt }) => {
           return (
-            <div className={"m-3"} key={alt}>
-              <div>
+            <div className="m-3" key={alt}>
+              <div className="hidden select-none md:block">
                 <Image src={src} alt={alt} width="80" height="80"></Image>
+              </div>
+              <div className="block select-none md:hidden">
+                <Image src={src} alt={alt} width="50" height="50"></Image>
               </div>
             </div>
           );

@@ -35,8 +35,12 @@ const othersLogoList = {
     { src: "/logos/react.svg", alt: "react" },
     { src: "/logos/jquery.svg", alt: "jquery" },
     { src: "/logos/firebase.svg", alt: "firebase" },
+    { src: "/logos/chakraui.svg", alt: "chakraui" },
   ],
-  learning: [{ src: "/logos/unity.svg", alt: "unity" }],
+  learning: [
+    { src: "/logos/unity.svg", alt: "unity" },
+    { src: "/logos/tailwindcss.svg", alt: "tailwindcss" },
+  ],
 };
 
 export const Skills = () => {

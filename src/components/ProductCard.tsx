@@ -24,12 +24,16 @@ export const ProductCard = (props: Props) => {
         isEven ? "" : "lg:flex-row-reverse"
       }`}
     >
-      <div className={"container shadow-lg lg:w-2/3 bg-red-100"}>
+      <div
+        className={
+          "container product-card-img min-h-full rounded overflow-hidden lg:w-2/3"
+        }
+      >
         <Image
           src={productInfo.imgPath}
           alt={productInfo.title}
-          className={"border-2"}
           objectFit="cover"
+          // className={"opacity-20"}
           width={1920}
           height={1080}
         />
@@ -56,7 +60,7 @@ export const ProductCard = (props: Props) => {
             <span className={"font-bold"}>使用技術</span>：
             {productInfo.techList.map((techInfo) => {
               return (
-                <div key={techInfo.type}>
+                <div key={techInfo.type} className={"mb-4"}>
                   <p>{techInfo.type}</p>
                   <div className={"grid grid-cols-2"}>
                     {techInfo.techs.map((tech) => {

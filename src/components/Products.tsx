@@ -24,7 +24,7 @@ const productList = [
     techList: [
       {
         type: "フロントエンド",
-        techs: ["TypeScript", "Next.js", "Tailwind"],
+        techs: ["TypeScript", "Next.js", "Tailwind CSS"],
       },
     ],
   },
