@@ -1,7 +1,40 @@
-export const productList = [
+import { ProductInfo } from "../types/productInfo";
+
+export const productList: ProductInfo[] = [
+  {
+    title: "Portfolio",
+    githubURL: "https://github.com/tksx1227/Portfolio",
+    description: "今まさに開いているサイト",
+    introduction: [
+      "自分のこれまでの活動、自分の紹介等を簡潔にまとめるためにポートフォリオを作りました。",
+      "案外いいデザインに仕上がったと思っているので自己満しています。",
+    ],
+    pointList: [
+      "学び始めて日の浅い技術をメインで使ってみた（Next.js, Tailwind CSS）。",
+      "自分が綺麗だと思うデザインをFigmaで作ってみて、そのラフ案を実装するまで短期間で行った（背景画像も自作）。",
+    ],
+    image: {
+      src: "/product_images/portfolio.png",
+      width: 1920,
+      height: 1080,
+    },
+    period: "3日",
+    memberNum: 1,
+    role: "デザイン, 設計, 実装",
+    techList: [
+      {
+        type: "フロントエンド",
+        techs: ["TypeScript", "Next.js", "Tailwind CSS"],
+      },
+    ],
+  },
   {
     title: "Morning To Do",
-    githubURL: "https://github.com/tksx1227/Morning-To-Do",
+    image: {
+      src: "/product_images/morning-to-do.png",
+      width: 1920,
+      height: 1080,
+    },
     description: "エンジニア向けの朝用ToDoアプリ",
     introduction: [
       "TechBowl主催のハッカソンにて開発したアプリです。",
@@ -9,11 +42,12 @@ export const productList = [
     ],
     pointList: [
       "明るい色をメインで使い、タスクを付箋用紙のようなデザインすることで、全体的に柔らかい雰囲気のUIになるように心がけた。",
-      "達成したタスクの個数に応じて、GitHubを模した形でログを残し、視覚的にもモチベーションを保てるようにした。",
+      "達成したタスクの個数に応じて、GitHub を模した形でログを残し、視覚的にもモチベーションを保てるようにした。",
     ],
-    imgPath: "/product_images/morning-to-do.png",
+    githubURL: "https://github.com/tksx1227/Morning-To-Do",
     period: "3週間",
-    numOfDev: 1,
+    role: "デザイン, 設計, 実装",
+    memberNum: 1,
     techList: [
       {
         type: "フロントエンド",
@@ -23,23 +57,86 @@ export const productList = [
     ],
   },
   {
-    title: "Portfolio",
-    githubURL: "https://github.com/tksx1227/Portfolio",
-    description: "今まさに開いているサイト",
+    title: "リゼロ新着通知Bot",
+    image: {
+      src: "/product_images/rezero-notification-bot.jpg",
+      width: 750,
+      height: 1334,
+    },
+    description:
+      "「Re：ゼロから始める異世界生活」の最新話更新をお知らせするLINE Bot",
     introduction: [
-      "自分のこれまでの活動、これからの目標等を簡潔にまとめるためにポートフォリオを作りました。",
+      "「小説家になろう」にて連載中の小説、通称”リゼロ”が更新されたときに、その旨を知らせてくれる LINE Bot を作りました。",
+      "リゼロは不定期更新かつ、公式からのお知らせが特に無いため、こちらのアカウントを友だち登録しておくといち早く最新話を読むことができます。",
     ],
     pointList: [
-      "学び始めて日の浅い技術をメインで使ってみた（Next.js, Tailwind CSS）。",
-      "自分が綺麗だと思うデザインをFigmaで作ってみて、そのラフ案を実装するまで短期間で行った（背景画像も自作）。",
+      "Cloud Functions の TimeScheduler を使用し、5分毎に更新を確認することで、更新後すぐに通知を飛ばすことができる。",
     ],
-    imgPath: "/product_images/portfolio.png",
-    period: "3日",
-    numOfDev: 1,
+    githubURL: "https://github.com/tksx1227/rezero-notification-bot",
+    period: "2日",
+    role: "設計, 実装",
+    memberNum: 1,
     techList: [
       {
-        type: "フロントエンド",
-        techs: ["TypeScript", "Next.js", "Tailwind CSS"],
+        type: "バックエンド",
+        techs: ["Node.js", "TypeScript", "Cloud Functions", "Firestore"],
+      },
+    ],
+  },
+  {
+    title: "Qiitaくん",
+    image: {
+      src: "/product_images/rezero-notification-bot.jpg",
+      width: 1920,
+      height: 1080,
+    },
+    description: "Qiita のトレンド記事を教えてくれる Alexa スキル",
+    introduction: [
+      "期間と記事数を教えると、該当する Qiita のトレンド記事を読み上げてくれます。",
+    ],
+    pointList: [
+      "自分用として開発したものであるため、オプションとして、読み上げた記事を LINE の方に送信する機能も搭載している。",
+    ],
+    githubURL: "https://github.com/tksx1227/Qiita_Trend",
+    period: "2日",
+    role: "設計, 実装",
+    memberNum: 1,
+    techList: [
+      {
+        type: "バックエンド",
+        techs: ["Python", "Flask", "Heroku"],
+      },
+    ],
+  },
+  {
+    title: "女優識別Bot",
+    image: {
+      src: "/product_images/rezero-notification-bot.jpg",
+      width: 1920,
+      height: 1080,
+    },
+    description: "5人の女優を判別する LINE Bot",
+    introduction: [
+      "深層学習を組み込むことで画像認識を行う LINE Bot を作りました。",
+      "こちらは深層学習を体系的に学んだ後に、アウトプットとして最初に実装したアプリです。",
+      "仕組みとしては、LINE 側で受信した画像を一度保存し、その画像をあらかじめ学習しているモデルに通すことで、類似度を算出、返信するようになっています。",
+    ],
+    pointList: [
+      "画像データの収集から、モデルの構築、学習までを全て自分で行っている。",
+      "当時、学習してからまだ日の浅かった PyTorch を採用している。",
+    ],
+    githubURL: "https://github.com/tksx1227/Actress_Identification_bot",
+    period: "1週間",
+    role: "設計, 実装",
+    memberNum: 1,
+    techList: [
+      {
+        type: "バックエンド",
+        techs: ["Python", "Flask", "Heroku"],
+      },
+      {
+        type: "モデル構築・学習",
+        techs: ["PyTorch"],
       },
     ],
   },

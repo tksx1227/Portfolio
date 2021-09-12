@@ -4,6 +4,7 @@ export const languageLogoList = {
     { src: "/logos/php.svg", alt: "php" },
     { src: "/logos/css.svg", alt: "css" },
     { src: "/logos/html.svg", alt: "html" },
+    { src: "/logos/dart.svg", alt: "dart" },
     { src: "/logos/python.svg", alt: "python" },
     { src: "/logos/javascript.svg", alt: "javascript" },
     { src: "/logos/typescript.svg", alt: "typescript" },
@@ -16,12 +17,13 @@ export const languageLogoList = {
 
 export const frameworkLogoList = {
   available: [
+    { src: "/logos/flutter.svg", alt: "flutter" },
     { src: "/logos/pytorch.svg", alt: "pytorch" },
     { src: "/logos/tensorflow.svg", alt: "tensorflow" },
   ],
   learning: [
     { src: "/logos/nextjs.svg", alt: "nest.js" },
-    { src: "/logos/flutter.svg", alt: "flutter" },
+
     { src: "/logos/electron.svg", alt: "electron" },
   ],
 };
