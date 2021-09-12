@@ -4,6 +4,7 @@ type Props = {
   isEven: boolean;
   productInfo: {
     title: string;
+    githubURL: string;
     description: string;
     imgPath: string;
     period: string;
@@ -24,16 +25,14 @@ export const ProductCard = (props: Props) => {
         isEven ? "" : "lg:flex-row-reverse"
       }`}
     >
-      <div
-        className={
-          "container product-card-img min-h-full rounded overflow-hidden lg:w-2/3"
-        }
-      >
+      <h3 className={"block text-2xl mb-6 font-bold text-indigo-700 lg:hidden"}>
+        {productInfo.title}
+      </h3>
+      <div className={"product-card-img rounded overflow-hidden lg:w-2/3"}>
         <Image
           src={productInfo.imgPath}
           alt={productInfo.title}
-          objectFit="cover"
-          // className={"opacity-20"}
+          objectFit="contain"
           width={1920}
           height={1080}
         />
@@ -44,11 +43,10 @@ export const ProductCard = (props: Props) => {
         }`}
       >
         <div className={"inline-block text-left"}>
-          <p className={"text-xl font-bold text-indigo-700"}>
+          <p className={"hidden text-xl font-bold text-indigo-700 lg:block"}>
             {productInfo.title}
           </p>
-          <p>{productInfo.description}</p>
-          <br />
+          <p className={"mb-6"}>{productInfo.description}</p>
           <p>
             <span className={"font-bold"}>開発期間</span>：{productInfo.period}
           </p>
@@ -56,13 +54,26 @@ export const ProductCard = (props: Props) => {
             <span className={"font-bold"}>制作人数</span>：
             {productInfo.numOfDev}人
           </p>
+          {productInfo.githubURL !== "" && (
+            <p>
+              <span className={"font-bold"}>リポジトリ</span>：
+              <a
+                href={productInfo.githubURL}
+                target="_brank"
+                title="Github"
+                className={"text-blue-600 hover:opacity-60"}
+              >
+                こちら
+              </a>
+            </p>
+          )}
           <div>
             <span className={"font-bold"}>使用技術</span>：
             {productInfo.techList.map((techInfo) => {
               return (
                 <div key={techInfo.type} className={"mb-4"}>
                   <p>{techInfo.type}</p>
-                  <div className={"grid grid-cols-2"}>
+                  <ul className={"list-disc grid grid-cols-2"}>
                     {techInfo.techs.map((tech) => {
                       return (
                         <li key={tech} className={"ml-4"}>
@@ -70,7 +81,7 @@ export const ProductCard = (props: Props) => {
                         </li>
                       );
                     })}
-                  </div>
+                  </ul>
                 </div>
               );
             })}

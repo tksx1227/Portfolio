@@ -1,34 +1,7 @@
-import { ProductCard } from "./ProductCard";
+import Link from "next/link";
 
-const productList = [
-  {
-    title: "Morning To Do",
-    description: "エンジニア向けの朝用ToDoアプリ",
-    imgPath: "/product_images/morning-to-do.png",
-    period: "3週間",
-    numOfDev: 1,
-    techList: [
-      {
-        type: "フロントエンド",
-        techs: ["HTML", "CSS", "JavaScript", "jQuery"],
-      },
-      { type: "バックエンド", techs: ["PHP", "MySQL"] },
-    ],
-  },
-  {
-    title: "Portfolio",
-    description: "今まさに開いているサイト",
-    imgPath: "/product_images/portfolio.png",
-    period: "3日",
-    numOfDev: 1,
-    techList: [
-      {
-        type: "フロントエンド",
-        techs: ["TypeScript", "Next.js", "Tailwind CSS"],
-      },
-    ],
-  },
-];
+import { ProductCard } from "./ProductCard";
+import { productList } from "../const/productInfo";
 
 export const Products = () => {
   return (
@@ -39,7 +12,11 @@ export const Products = () => {
           制作物
         </h2>
       </div>
-      <div className={"glass-container mt-8 px-6 py-10 space-y-28 lg:px-10"}>
+      <div
+        className={
+          "glass-container mt-8 px-6 py-10 space-y-24 lg:space-y-36 lg:px-10"
+        }
+      >
         {productList.map((productInfo, idx) => (
           <ProductCard
             key={productInfo.title}
@@ -47,14 +24,16 @@ export const Products = () => {
             productInfo={productInfo}
           />
         ))}
-        <div className={"mt-24 text-center"}>
-          <button
-            className={
-              "shadow-xl px-16 py-4 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white"
-            }
-          >
-            もっと見る
-          </button>
+        <div className={"text-center"}>
+          <Link href="/products-detail">
+            <a
+              className={
+                "shadow-xl inline-block px-8 py-3 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white lg:px-16 lg:py-4"
+              }
+            >
+              もっと見る
+            </a>
+          </Link>
         </div>
       </div>
     </section>

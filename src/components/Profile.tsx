@@ -30,7 +30,7 @@ export const Profile = () => {
             </p>
             <div
               className={
-                "flex flex-row justify-center space-x-6 my-6 lg:space-x-0 lg:justify-around lg:mb-0"
+                "flex flex-row justify-center space-x-10 my-6 lg:space-x-0 lg:justify-around lg:mb-0"
               }
             >
               <div>
