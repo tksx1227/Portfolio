@@ -19,7 +19,7 @@ export const SkillsCard = (props: Props) => {
   const { isLastItem = false, title, logoList } = props;
 
   return (
-    <div className={isLastItem ? "" : "mb-6"}>
+    <div className={isLastItem ? "" : "mb-12"}>
       <p className={"font-bold text-xl text-indigo-900 tracking-wide pb-2"}>
         {title}
       </p>

@@ -12,6 +12,19 @@ body {
   scroll-behavior: smooth;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(0deg, #43e2c6, #3183d0);
+  border-radius: 999px;
+}
+
+body::-webkit-scrollbar-track {
+  background: rgba(100, 100, 100, 0.2);
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -27,14 +40,13 @@ main {
 }
 
 .glass-container {
-  gap: 20px;
-  border-radius: 10px;
-  backdrop-filter: blur(3px);
+  border-radius: 15px;
+  backdrop-filter: blur(4px);
   background-color: rgba(255, 255, 255, 0.2);
-  box-shadow: rgba(0, 0, 0, 0.2) 1px 4px 8px;
-  border: 1px rgba(255, 255, 255, 0.3) solid;
-  border-bottom: 2px rgba(40, 40, 40, 0.35) solid;
-  border-right: 2px rgba(40, 40, 40, 0.35) solid;
+  box-shadow: rgba(31, 38, 135, 0.3) 0 4px 20px;
+  border: 2px rgba(255, 255, 255, 0.2) solid;
+  border-bottom: 2px rgba(40, 40, 40, 0.25) solid;
+  border-right: 2px rgba(40, 40, 40, 0.25) solid;
 }
 
 .under-bar {

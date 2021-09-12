@@ -1,4 +1,34 @@
-import Image from "next/image";
+import { ProductCard } from "./ProductCard";
+
+const productList = [
+  {
+    title: "Morning To Do",
+    description: "エンジニア向けの朝用ToDoアプリ",
+    imgPath: "/product_images/morning-to-do.png",
+    period: "3週間",
+    numOfDev: 1,
+    techList: [
+      {
+        type: "フロントエンド",
+        techs: ["HTML", "CSS", "JavaScript", "jQuery"],
+      },
+      { type: "バックエンド", techs: ["PHP", "MySQL"] },
+    ],
+  },
+  {
+    title: "Portfolio",
+    description: "今まさに開いているサイト",
+    imgPath: "/product_images/portfolio.png",
+    period: "3日",
+    numOfDev: 1,
+    techList: [
+      {
+        type: "フロントエンド",
+        techs: ["TypeScript", "Next.js", "Tailwind"],
+      },
+    ],
+  },
+];
 
 export const Products = () => {
   return (
@@ -9,59 +39,14 @@ export const Products = () => {
           制作物
         </h2>
       </div>
-      <div className={"glass-container mt-8 px-6 py-10 lg:px-10"}>
-        <div className={"flex flex-col lg:flex-row"}>
-          <div className={"container shadow-lg lg:w-2/3 bg-red-100"}>
-            <Image
-              src="/product_images/morning-to-do.png"
-              alt="Morning to do"
-              className={"border-2"}
-              objectFit="cover"
-              width={1920}
-              height={1080}
-            />
-          </div>
-          <div className={"mt-8 lg:mt-0 lg:ml-12 lg:w-1/3"}>
-            <p>Morning To Do</p>
-            <p>エンジニア向けの朝用ToDoアプリ</p>
-            <br />
-            <p>開発期間：3週間</p>
-            <p>制作人数：1人</p>
-            <p>
-              使用技術：
-              <br />
-              &nbsp;&nbsp;フロント：HTML, CSS, JavaScript, jQuery
-              <br />
-              &nbsp;&nbsp;バックエンド：PHP, MySQL
-            </p>
-          </div>
-        </div>
-        <div className={"mt-24 flex flex-col-reverse lg:flex-row"}>
-          <div className={"mt-8 lg:mt-0 lg:ml-12 lg:w-1/3"}>
-            <p>Morning To Do</p>
-            <p>エンジニア向けの朝用ToDoアプリ</p>
-            <br />
-            <p>開発期間：3週間</p>
-            <p>制作人数：1人</p>
-            <p>
-              使用技術：
-              <br />
-              &nbsp;&nbsp;フロント：HTML, CSS, JavaScript, jQuery
-              <br />
-              &nbsp;&nbsp;バックエンド：PHP, MySQL
-            </p>
-          </div>
-          <div className={"container shadow-lg lg:w-2/3 bg-red-100"}>
-            <Image
-              src="/product_images/morning-to-do.png"
-              alt="Morning to do"
-              className={"border-2"}
-              objectFit="cover"
-              width={1920}
-              height={1080}
-            />
-          </div>
-        </div>
+      <div className={"glass-container mt-8 px-6 py-10 space-y-28 lg:px-10"}>
+        {productList.map((productInfo, idx) => (
+          <ProductCard
+            key={productInfo.title}
+            isEven={idx % 2 == 0}
+            productInfo={productInfo}
+          />
+        ))}
         <div className={"mt-24 text-center"}>
           <button
             className={
