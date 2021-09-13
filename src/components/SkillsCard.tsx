@@ -39,10 +39,22 @@ export const SkillsCard = (props: Props) => {
           return (
             <div className="m-3" key={alt}>
               <div className="hidden select-none md:block">
-                <Image src={src} alt={alt} width="80" height="80"></Image>
+                <Image
+                  src={src}
+                  alt={alt}
+                  title={alt}
+                  width="80"
+                  height="80"
+                ></Image>
               </div>
               <div className="block select-none md:hidden">
-                <Image src={src} alt={alt} width="50" height="50"></Image>
+                <Image
+                  src={src}
+                  alt={alt}
+                  title={alt}
+                  width="50"
+                  height="50"
+                ></Image>
               </div>
             </div>
           );
@@ -54,10 +66,22 @@ export const SkillsCard = (props: Props) => {
           return (
             <div className="m-3" key={alt}>
               <div className="hidden select-none md:block">
-                <Image src={src} alt={alt} width="80" height="80"></Image>
+                <Image
+                  src={src}
+                  alt={alt}
+                  title={alt}
+                  width="80"
+                  height="80"
+                ></Image>
               </div>
               <div className="block select-none md:hidden">
-                <Image src={src} alt={alt} width="50" height="50"></Image>
+                <Image
+                  src={src}
+                  alt={alt}
+                  title={alt}
+                  width="50"
+                  height="50"
+                ></Image>
               </div>
             </div>
           );
