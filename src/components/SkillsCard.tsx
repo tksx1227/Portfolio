@@ -30,7 +30,11 @@ export const SkillsCard = (props: Props) => {
       <p className={"text-lg tracking-widest font-semibold mt-6 mb-4"}>
         ある程度使える
       </p>
-      <div className={"flex flex-wrap mb-8"}>
+      <div
+        className={
+          " mb-8 text-center grid grid-cols-4 md:grid-cols-none md:flex md:flex-wrap"
+        }
+      >
         {logoList.available.map(({ src, alt }) => {
           return (
             <div className="m-3" key={alt}>

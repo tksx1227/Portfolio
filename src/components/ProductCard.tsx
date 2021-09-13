@@ -11,14 +11,14 @@ export const ProductCard = (props: Props) => {
 
   return (
     <div
-      className={`flex flex-col lg:flex-row ${
-        isEven ? "" : "lg:flex-row-reverse"
+      className={`flex flex-col md:flex-row ${
+        isEven ? "" : "md:flex-row-reverse"
       }`}
     >
-      <h3 className={"block text-2xl mb-6 font-bold text-indigo-700 lg:hidden"}>
+      <h3 className={"block text-2xl mb-6 font-bold text-indigo-700 md:hidden"}>
         {productInfo.title}
       </h3>
-      <div className={"lg:w-2/3 flex justify-center"}>
+      <div className={"md:w-2/3 flex justify-center"}>
         <div>
           <div className={"flex product-card-img rounded overflow-hidden"}>
             <Image
@@ -32,12 +32,12 @@ export const ProductCard = (props: Props) => {
         </div>
       </div>
       <div
-        className={`mt-8 leading-relaxed lg:mt-0 lg:w-1/3 ${
-          isEven ? "lg:ml-12 lg:text-left" : "lg:mr-12 lg:text-right"
+        className={`mt-8 leading-relaxed md:mt-0 md:w-1/3 ${
+          isEven ? "md:ml-12 md:text-left" : "md:mr-12 md:text-right"
         }`}
       >
         <div className={"inline-block text-left"}>
-          <p className={"hidden text-xl font-bold text-indigo-700 lg:block"}>
+          <p className={"hidden text-xl font-bold text-indigo-700 md:block"}>
             {productInfo.title}
           </p>
           <p className={"mb-6"}>{productInfo.description}</p>

@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Top = () => {
   return (
-    <section id="top" className={"text-center pt-16 lg:pt-24"}>
+    <section id="top" className={"text-center pt-16 md:pt-24"}>
       <Image
         src="/user-icon.jpg"
         alt="Profile Icon"
@@ -14,7 +14,7 @@ export const Top = () => {
       <p className={"text-gray-400"}>JAPAN FUKUOKA</p>
       <div
         className={
-          "glass-container mt-8 p-6 text-left text-sm leading-relaxed tracking-widest lg:p-10 lg:text-center lg:text-base"
+          "glass-container mt-8 p-6 text-left text-sm leading-relaxed tracking-widest md:p-10 md:text-center md:text-base"
         }
       >
         <p>地方の情報系大学3年生</p>

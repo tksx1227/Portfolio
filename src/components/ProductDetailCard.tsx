@@ -12,11 +12,11 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
       </h3>
       <div
         className={
-          "mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300 lg:mb-12"
+          "mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300 md:mb-12"
         }
       ></div>
-      <div className={"flex flex-col lg:flex-row"}>
-        <div className={"lg:w-1/2 flex justify-center"}>
+      <div className={"flex flex-col md:flex-row"}>
+        <div className={"md:w-1/2 flex justify-center"}>
           <div>
             <div className={"flex product-card-img rounded overflow-hidden"}>
               <Image
@@ -31,7 +31,7 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
         </div>
         <div
           className={
-            "mt-8 leading-relaxed lg:mt-0 lg:w-1/2 lg:ml-12 lg:text-left"
+            "mt-8 leading-relaxed md:mt-0 md:w-1/2 md:ml-12 md:text-left"
           }
         >
           <div className={"inline-block text-left"}>
