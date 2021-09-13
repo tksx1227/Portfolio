@@ -26,6 +26,7 @@ export const productList: ProductInfo[] = [
         type: "フロントエンド",
         techs: ["TypeScript", "Next.js", "Tailwind CSS"],
       },
+      { type: "デザイン", techs: ["Figma"] },
     ],
   },
   {
