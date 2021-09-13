@@ -73,9 +73,12 @@ export const ProductCard = (props: Props) => {
                 <div key={techInfo.type} className={"mb-4"}>
                   <p>{techInfo.type}</p>
                   <ul className={"list-disc grid grid-cols-2"}>
-                    {techInfo.techs.map((tech) => {
+                    {techInfo.techs.map((tech, idx) => {
                       return (
-                        <li key={tech} className={"ml-4"}>
+                        <li
+                          key={tech}
+                          className={`${idx % 2 == 0 ? "" : "ml-4"}`}
+                        >
                           {tech}
                         </li>
                       );

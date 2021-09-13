@@ -40,7 +40,7 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
               <p>{productInfo.description}</p>
               <br />
               {productInfo.introduction.map((text) => (
-                <p key="text">{text}</p>
+                <p key={text}>{text}</p>
               ))}
               <br />
               <p>主なポイント</p>
@@ -84,8 +84,11 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
                   return (
                     <div key={idx} className={"mb-4"}>
                       <p>{techInfo.type}</p>
-
-                      <ul className={"list-inside list-disc grid grid-cols-2"}>
+                      <ul
+                        className={
+                          "list-disc grid grid-cols-2 gap-x-6 md:gap-x-0"
+                        }
+                      >
                         {techInfo.techs.map((tech) => {
                           return <li key={tech}>{tech}</li>;
                         })}
