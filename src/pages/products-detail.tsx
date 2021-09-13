@@ -13,7 +13,7 @@ const ProductsDetail = () => {
       </Head>
       <Layout>
         <section id="products">
-          <div className={"tracking-wider lg:mt-16"}>
+          <div className={"tracking-wider mt-8 lg:mt-16"}>
             <p className={"text-indigo-800 text-lg font-semibold"}>PRODUCTS</p>
             <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl"}>
               制作物
