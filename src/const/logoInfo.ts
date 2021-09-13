@@ -2,8 +2,8 @@ export const languageLogoList = {
   available: [
     { src: "/logos/c.svg", alt: "c" },
     { src: "/logos/php.svg", alt: "php" },
-    { src: "/logos/css.svg", alt: "css" },
     { src: "/logos/html.svg", alt: "html" },
+    { src: "/logos/css.svg", alt: "css" },
     { src: "/logos/dart.svg", alt: "dart" },
     { src: "/logos/python.svg", alt: "python" },
     { src: "/logos/javascript.svg", alt: "javascript" },
@@ -30,6 +30,8 @@ export const frameworkLogoList = {
 
 export const othersLogoList = {
   available: [
+    { src: "/logos/git.svg", alt: "git" },
+    { src: "/logos/figma.svg", alt: "figma" },
     { src: "/logos/mysql.svg", alt: "mysql" },
     { src: "/logos/flask.svg", alt: "flask" },
     { src: "/logos/react.svg", alt: "react" },

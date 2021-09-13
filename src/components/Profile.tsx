@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export const Profile = () => {
   return (
-    <section id="profile" className={"mt-24 lg:mt-36"}>
+    <section id="profile" className={"mb-28 mt-16 pt-8 lg:mt-28 lg:mb-52"}>
       <div>
         <p className={"text-indigo-800 text-lg font-semibold"}>PROFILE</p>
         <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl"}>
@@ -17,7 +17,7 @@ export const Profile = () => {
         >
           <div className={"flex-shrink-0 text-center"}>
             <Image
-              src="/icon.jpg"
+              src="/user-icon.jpg"
               alt="Profile Icon"
               className={"rounded-full mx-auto"}
               width={150}

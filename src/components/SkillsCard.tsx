@@ -27,7 +27,7 @@ export const SkillsCard = (props: Props) => {
           "h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300"
         }
       ></div>
-      <p className={"text-lg tracking-widest font-semibold mt-4 mb-2"}>
+      <p className={"text-lg tracking-widest font-semibold mt-6 mb-4"}>
         ある程度使える
       </p>
       <div className={"flex flex-wrap mb-8"}>
@@ -44,7 +44,7 @@ export const SkillsCard = (props: Props) => {
           );
         })}
       </div>
-      <p className={"text-lg tracking-widest font-semibold mb-2"}>学習中</p>
+      <p className={"text-lg tracking-widest font-semibold mb-4"}>学習中</p>
       <div className={"flex flex-wrap"}>
         {logoList.learning.map(({ src, alt }) => {
           return (

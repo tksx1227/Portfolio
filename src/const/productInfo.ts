@@ -83,61 +83,61 @@ export const productList: ProductInfo[] = [
       },
     ],
   },
-  {
-    title: "Qiitaくん",
-    image: {
-      src: "/product_images/rezero-notification-bot.jpg",
-      width: 1920,
-      height: 1080,
-    },
-    description: "Qiita のトレンド記事を教えてくれる Alexa スキル",
-    introduction: [
-      "期間と記事数を教えると、該当する Qiita のトレンド記事を読み上げてくれます。",
-    ],
-    pointList: [
-      "自分用として開発したものであるため、オプションとして、読み上げた記事を LINE の方に送信する機能も搭載している。",
-    ],
-    githubURL: "https://github.com/tksx1227/Qiita_Trend",
-    period: "2日",
-    role: "設計, 実装",
-    memberNum: 1,
-    techList: [
-      {
-        type: "バックエンド",
-        techs: ["Python", "Flask", "Heroku"],
-      },
-    ],
-  },
-  {
-    title: "女優識別Bot",
-    image: {
-      src: "/product_images/rezero-notification-bot.jpg",
-      width: 1920,
-      height: 1080,
-    },
-    description: "5人の女優を判別する LINE Bot",
-    introduction: [
-      "深層学習を組み込むことで画像認識を行う LINE Bot を作りました。",
-      "こちらは深層学習を体系的に学んだ後に、アウトプットとして最初に実装したアプリです。",
-      "仕組みとしては、LINE 側で受信した画像を一度保存し、その画像をあらかじめ学習しているモデルに通すことで、類似度を算出、返信するようになっています。",
-    ],
-    pointList: [
-      "画像データの収集から、モデルの構築、学習までを全て自分で行っている。",
-      "当時、学習してからまだ日の浅かった PyTorch を採用している。",
-    ],
-    githubURL: "https://github.com/tksx1227/Actress_Identification_bot",
-    period: "1週間",
-    role: "設計, 実装",
-    memberNum: 1,
-    techList: [
-      {
-        type: "バックエンド",
-        techs: ["Python", "Flask", "Heroku"],
-      },
-      {
-        type: "モデル構築・学習",
-        techs: ["PyTorch"],
-      },
-    ],
-  },
+  // {
+  //   title: "Qiitaくん",
+  //   image: {
+  //     src: "/product_images/rezero-notification-bot.jpg",
+  //     width: 1920,
+  //     height: 1080,
+  //   },
+  //   description: "Qiita のトレンド記事を教えてくれる Alexa スキル",
+  //   introduction: [
+  //     "期間と記事数を教えると、該当する Qiita のトレンド記事を読み上げてくれます。",
+  //   ],
+  //   pointList: [
+  //     "自分用として開発したものであるため、オプションとして、読み上げた記事を LINE の方に送信する機能も搭載している。",
+  //   ],
+  //   githubURL: "https://github.com/tksx1227/Qiita_Trend",
+  //   period: "2日",
+  //   role: "設計, 実装",
+  //   memberNum: 1,
+  //   techList: [
+  //     {
+  //       type: "バックエンド",
+  //       techs: ["Python", "Flask", "Heroku"],
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "女優識別Bot",
+  //   image: {
+  //     src: "/product_images/rezero-notification-bot.jpg",
+  //     width: 1920,
+  //     height: 1080,
+  //   },
+  //   description: "5人の女優を判別する LINE Bot",
+  //   introduction: [
+  //     "深層学習を組み込むことで画像認識を行う LINE Bot を作りました。",
+  //     "こちらは深層学習を体系的に学んだ後に、アウトプットとして最初に実装したアプリです。",
+  //     "仕組みとしては、LINE 側で受信した画像を一度保存し、その画像をあらかじめ学習しているモデルに通すことで、類似度を算出、返信するようになっています。",
+  //   ],
+  //   pointList: [
+  //     "画像データの収集から、モデルの構築、学習までを全て自分で行っている。",
+  //     "当時、学習してからまだ日の浅かった PyTorch を採用している。",
+  //   ],
+  //   githubURL: "https://github.com/tksx1227/Actress_Identification_bot",
+  //   period: "1週間",
+  //   role: "設計, 実装",
+  //   memberNum: 1,
+  //   techList: [
+  //     {
+  //       type: "バックエンド",
+  //       techs: ["Python", "Flask", "Heroku"],
+  //     },
+  //     {
+  //       type: "モデル構築・学習",
+  //       techs: ["PyTorch"],
+  //     },
+  //   ],
+  // },
 ];

@@ -5,7 +5,7 @@ import { productList } from "../const/productInfo";
 
 export const Products = () => {
   return (
-    <section id="products" className={"mt-24 lg:mt-36"}>
+    <section id="products" className={"mt-16 pt-8 lg:mt-28"}>
       <div className={"tracking-wider"}>
         <p className={"text-indigo-800 text-lg font-semibold"}>PRODUCTS</p>
         <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl"}>
@@ -14,16 +14,19 @@ export const Products = () => {
       </div>
       <div
         className={
-          "glass-container mt-8 px-6 py-10 space-y-24 lg:space-y-36 lg:px-10"
+          "glass-container mt-8 px-6 py-10 space-y-24 lg:space-y-40 lg:px-10"
         }
       >
-        {productList.map((productInfo, idx) => (
-          <ProductCard
-            key={productInfo.title}
-            isEven={idx % 2 == 0}
-            productInfo={productInfo}
-          />
-        ))}
+        <ProductCard
+          key={productList[0].title}
+          isEven={true}
+          productInfo={productList[0]}
+        />
+        <ProductCard
+          key={productList[1].title}
+          isEven={false}
+          productInfo={productList[1]}
+        />
         <div className={"text-center"}>
           <Link href="/products-detail">
             <a

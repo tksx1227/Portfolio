@@ -5,9 +5,13 @@ import { Footer } from "./Footer";
 
 export const Layout = (props: { children: ReactNode }) => {
   return (
-    <div className={"lg:font-mono text-gray600"}>
+    <div className={"relative text-gray-600"}>
       <Header />
-      <main className={"pt-8 pb-28 px-4 lg:px-16 lg:pt-16"}>
+      <main
+        className={
+          "flex flex-col justify-center pt-20 pb-16 px-4 min-h-screen lg:pt-28 lg:px-16"
+        }
+      >
         {props.children}
       </main>
       <Footer />

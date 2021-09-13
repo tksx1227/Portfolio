@@ -1,19 +1,9 @@
 import Image from "next/image";
+import { ProductInfo } from "../types/productInfo";
 
 type Props = {
   isEven: boolean;
-  productInfo: {
-    title: string;
-    githubURL: string;
-    description: string;
-    imgPath: string;
-    period: string;
-    numOfDev: number;
-    techList: {
-      type: string;
-      techs: string[];
-    }[];
-  };
+  productInfo: ProductInfo;
 };
 
 export const ProductCard = (props: Props) => {
@@ -28,14 +18,17 @@ export const ProductCard = (props: Props) => {
       <h3 className={"block text-2xl mb-6 font-bold text-indigo-700 lg:hidden"}>
         {productInfo.title}
       </h3>
-      <div className={"product-card-img rounded overflow-hidden lg:w-2/3"}>
-        <Image
-          src={productInfo.imgPath}
-          alt={productInfo.title}
-          objectFit="contain"
-          width={1920}
-          height={1080}
-        />
+      <div className={"lg:w-2/3"}>
+        <div className={"product-card-img flex rounded overflow-hidden"}>
+          <Image
+            src={productInfo.image.src}
+            alt={productInfo.title}
+            objectFit="contain"
+            // layout="fill"
+            width={productInfo.image.width}
+            height={productInfo.image.height}
+          />
+        </div>
       </div>
       <div
         className={`mt-8 leading-relaxed lg:mt-0 lg:w-1/3 ${
@@ -52,7 +45,7 @@ export const ProductCard = (props: Props) => {
           </p>
           <p>
             <span className={"font-bold"}>制作人数</span>：
-            {productInfo.numOfDev}人
+            {productInfo.memberNum}人
           </p>
           {productInfo.githubURL !== "" && (
             <p>
@@ -61,7 +54,9 @@ export const ProductCard = (props: Props) => {
                 href={productInfo.githubURL}
                 target="_brank"
                 title="Github"
-                className={"text-blue-600 hover:opacity-60"}
+                className={
+                  "transition duration-200 text-blue-600 hover:opacity-60"
+                }
               >
                 こちら
               </a>

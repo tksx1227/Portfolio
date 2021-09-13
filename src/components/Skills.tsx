@@ -8,7 +8,7 @@ import {
 
 export const Skills = () => {
   return (
-    <section id="skills" className={"mt-24 lg:mt-36"}>
+    <section id="skills" className={"mt-16 pt-8 lg:mt-28"}>
       <div>
         <p className={"text-indigo-800 text-lg font-semibold"}>SKILLS</p>
         <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl"}>
