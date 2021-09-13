@@ -9,7 +9,7 @@ export const Layout = (props: { children: ReactNode }) => {
       <Header />
       <main
         className={
-          "flex flex-col justify-center pt-20 pb-16 px-4 min-h-screen lg:pt-28 lg:px-16"
+          "flex flex-col justify-center pt-20 pb-16 px-4 min-h-screen md:pt-28 md:px-16"
         }
       >
         {props.children}

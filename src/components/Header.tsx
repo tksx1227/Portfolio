@@ -4,10 +4,10 @@ export const Header = () => {
   return (
     <header
       className={
-        "font-semibold absolute w-full bg-white flex flex-row justify-center p-6 border-b-2 lg:text-lg lg:p-10 lg:justify-between"
+        "font-semibold absolute w-full bg-white flex flex-row justify-center p-6 border-b-2 md:text-lg md:p-10 md:justify-between"
       }
     >
-      <div className={"hidden lg:block"}></div>
+      <div className={"hidden md:block"}></div>
       <div className={"flex flex-row justify-around space-x-3"}>
         <Link href="/#top">
           <a className={"px-2 under-bar"}>HOME</a>

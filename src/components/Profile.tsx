@@ -2,17 +2,17 @@ import Image from "next/image";
 
 export const Profile = () => {
   return (
-    <section id="profile" className={"mb-28 mt-16 pt-8 lg:mt-28 lg:mb-52"}>
+    <section id="profile" className={"mb-28 mt-16 pt-8 md:mt-28 md:mb-52"}>
       <div>
         <p className={"text-indigo-800 text-lg font-semibold"}>PROFILE</p>
-        <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl"}>
+        <h2 className={"text-2xl font-bold tracking-wider md:text-3xl"}>
           プロフィール
         </h2>
       </div>
-      <div className={"glass-container mt-8 py-10 px-6 lg:px-10"}>
+      <div className={"glass-container mt-8 py-10 px-6 md:px-10"}>
         <div
           className={
-            "flex flex-col lg:flex-row lg:justify-around lg:space-x-10"
+            "flex flex-col md:flex-row md:justify-around md:space-x-10"
           }
         >
           <div className={"flex-shrink-0 text-center"}>
@@ -30,7 +30,7 @@ export const Profile = () => {
             </p>
             <div
               className={
-                "flex flex-row justify-center space-x-10 my-6 lg:space-x-0 lg:justify-around lg:mb-0"
+                "flex flex-row justify-center space-x-10 my-6 md:space-x-0 md:justify-around md:mb-0"
               }
             >
               <div>
@@ -105,9 +105,9 @@ export const Profile = () => {
               </div>
             </div>
           </div>
-          <div className={"border border-gray-300 mb-6 lg:mb-0"}></div>
+          <div className={"border border-gray-300 mb-6 md:mb-0"}></div>
           <div>
-            <p className={"text-sm leading-relaxed lg:text-base"}>
+            <p className={"text-sm leading-relaxed md:text-base"}>
               地方の情報系大学に通う大学3年生
               <br />
               <br />

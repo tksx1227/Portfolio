@@ -13,15 +13,15 @@ const ProductsDetail = () => {
       </Head>
       <Layout>
         <section id="products">
-          <div className={"tracking-wider mt-8 lg:mt-16"}>
+          <div className={"tracking-wider mt-8 md:mt-16"}>
             <p className={"text-indigo-800 text-lg font-semibold"}>PRODUCTS</p>
-            <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl"}>
+            <h2 className={"text-2xl font-bold tracking-wider md:text-3xl"}>
               制作物
             </h2>
           </div>
           <div
             className={
-              "glass-container mt-8 mb-24 px-6 py-10 space-y-24 lg:mb-48 lg:px-10 lg:space-y-36"
+              "glass-container mt-8 mb-24 px-6 py-10 space-y-24 md:mb-48 md:px-10 md:space-y-36"
             }
           >
             {productList.map((productInfo, idx) => {

@@ -11,7 +11,7 @@ const Custom404 = () => {
       </Head>
       <Layout>
         <div className={"text-center"}>
-          <h2 className={"text-2xl font-bold tracking-wider lg:text-3xl mb-8"}>
+          <h2 className={"text-2xl font-bold tracking-wider md:text-3xl mb-8"}>
             404エラー
           </h2>
           <p>お探しのページは見つかりませんでした。</p>
