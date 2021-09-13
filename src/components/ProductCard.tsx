@@ -18,16 +18,17 @@ export const ProductCard = (props: Props) => {
       <h3 className={"block text-2xl mb-6 font-bold text-indigo-700 lg:hidden"}>
         {productInfo.title}
       </h3>
-      <div className={"lg:w-2/3"}>
-        <div className={"product-card-img flex rounded overflow-hidden"}>
-          <Image
-            src={productInfo.image.src}
-            alt={productInfo.title}
-            objectFit="contain"
-            // layout="fill"
-            width={productInfo.image.width}
-            height={productInfo.image.height}
-          />
+      <div className={"lg:w-2/3 flex justify-center"}>
+        <div>
+          <div className={"flex product-card-img rounded overflow-hidden"}>
+            <Image
+              src={productInfo.image.src}
+              alt={productInfo.title}
+              objectFit="contain"
+              width={productInfo.image.width}
+              height={productInfo.image.height}
+            />
+          </div>
         </div>
       </div>
       <div

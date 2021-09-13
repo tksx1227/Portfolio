@@ -16,16 +16,17 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
         }
       ></div>
       <div className={"flex flex-col lg:flex-row"}>
-        <div className={"lg:w-1/2"}>
-          <div className={"flex product-card-img rounded overflow-hidden"}>
-            <Image
-              src={productInfo.image.src}
-              alt={productInfo.title}
-              objectFit="contain"
-              className={""}
-              width={productInfo.image.width}
-              height={productInfo.image.height}
-            />
+        <div className={"lg:w-1/2 flex justify-center"}>
+          <div>
+            <div className={"flex product-card-img rounded overflow-hidden"}>
+              <Image
+                src={productInfo.image.src}
+                alt={productInfo.title}
+                objectFit="contain"
+                width={productInfo.image.width}
+                height={productInfo.image.height}
+              />
+            </div>
           </div>
         </div>
         <div
