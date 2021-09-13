@@ -60,6 +60,9 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
                 <span className={"font-bold"}>制作人数</span>：
                 {productInfo.memberNum}人
               </p>
+              <p>
+                <span className={"font-bold"}>役割</span>：{productInfo.role}
+              </p>
               {productInfo.githubURL !== "" && (
                 <p>
                   <span className={"font-bold"}>リポジトリ</span>：

@@ -11,7 +11,7 @@ export const productList: ProductInfo[] = [
     ],
     pointList: [
       "学び始めて日の浅い技術をメインで使ってみた（Next.js, Tailwind CSS）。",
-      "自分が綺麗だと思うデザインをFigmaで作ってみて、そのラフ案を実装するまで短期間で行った（背景画像も自作）。",
+      "自分が綺麗だと思うデザインを Figma で作ってみて、そのラフ案を実装するまで短期間で行った（背景画像も自作）。",
     ],
     image: {
       src: "/product_images/portfolio.png",
@@ -64,7 +64,7 @@ export const productList: ProductInfo[] = [
       height: 1334,
     },
     description:
-      "「Re：ゼロから始める異世界生活」の最新話更新をお知らせするLINE Bot",
+      "「Re：ゼロから始める異世界生活」の最新話更新をお知らせする LINE Bot",
     introduction: [
       "「小説家になろう」にて連載中の小説、通称”リゼロ”が更新されたときに、その旨を知らせてくれる LINE Bot を作りました。",
       "リゼロは不定期更新かつ、公式からのお知らせが特に無いため、こちらのアカウントを友だち登録しておくといち早く最新話を読むことができます。",
