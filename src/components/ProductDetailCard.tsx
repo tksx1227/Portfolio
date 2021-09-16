@@ -80,13 +80,13 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
               )}
               <div>
                 <span className={"font-bold"}>使用技術</span>：
-                {productInfo.techList.map((techInfo, idx) => {
+                {productInfo.techList.map((techInfo) => {
                   return (
-                    <div key={idx} className={"mb-4"}>
+                    <div key={techInfo.type} className={"mb-4"}>
                       <p>{techInfo.type}</p>
                       <ul
                         className={
-                          "list-disc grid grid-cols-2 gap-x-6 md:gap-x-0"
+                          "list-disc grid grid-cols-2 gap-x-6 md:gap-x-0 lg:grid-cols-3"
                         }
                       >
                         {techInfo.techs.map((tech) => {

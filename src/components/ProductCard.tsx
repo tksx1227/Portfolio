@@ -36,7 +36,7 @@ export const ProductCard = (props: Props) => {
           isEven ? "md:ml-12 md:text-left" : "md:mr-12 md:text-right"
         }`}
       >
-        <div className={"inline-block text-left"}>
+        <div className={"text-left md:inline-block"}>
           <p className={"hidden text-xl font-bold text-indigo-700 md:block"}>
             {productInfo.title}
           </p>
@@ -72,16 +72,11 @@ export const ProductCard = (props: Props) => {
               return (
                 <div key={techInfo.type} className={"mb-4"}>
                   <p>{techInfo.type}</p>
-                  <ul className={"list-disc grid grid-cols-2"}>
-                    {techInfo.techs.map((tech, idx) => {
-                      return (
-                        <li
-                          key={tech}
-                          className={`${idx % 2 == 0 ? "" : "ml-4"}`}
-                        >
-                          {tech}
-                        </li>
-                      );
+                  <ul
+                    className={"list-disc grid grid-cols-2 gap-x-6 md:gap-x-12"}
+                  >
+                    {techInfo.techs.map((tech) => {
+                      return <li key={tech}>{tech}</li>;
                     })}
                   </ul>
                 </div>
