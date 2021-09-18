@@ -24,7 +24,7 @@ const ProductsDetail = () => {
               "glass-container mt-8 mb-24 px-6 py-10 space-y-24 md:mb-48 md:px-10 md:space-y-36"
             }
           >
-            {productList.map((productInfo, idx) => {
+            {productList.map((productInfo) => {
               return (
                 <ProductDetailCard
                   key={productInfo.title}

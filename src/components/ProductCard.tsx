@@ -40,7 +40,7 @@ export const ProductCard = (props: Props) => {
           <p className={"hidden text-xl font-bold text-indigo-700 md:block"}>
             {productInfo.title}
           </p>
-          <p className={"mb-6"}>{productInfo.description}</p>
+          <p className={"mb-6"}>{productInfo.overview}</p>
           <p>
             <span className={"font-bold"}>開発期間</span>：{productInfo.period}
           </p>

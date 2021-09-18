@@ -37,13 +37,13 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
           <div className={"inline-block text-left"}>
             <div>
               <p className={"text-xl font-semibold mb-2"}>備考</p>
-              <p>{productInfo.description}</p>
+              <p>{productInfo.overview}</p>
               <br />
-              {productInfo.introduction.map((text) => (
+              {productInfo.description.map((text) => (
                 <p key={text}>{text}</p>
               ))}
               <br />
-              <p>主なポイント</p>
+              <p className={"tracking-wider"}>主なポイント♪</p>
               <ul className={"list-disc space-y-2"}>
                 {productInfo.pointList.map((point) => (
                   <li key={point}>{point}</li>

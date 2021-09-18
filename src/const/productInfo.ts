@@ -4,8 +4,8 @@ export const productList: ProductInfo[] = [
   {
     title: "Portfolio",
     githubURL: "https://github.com/tksx1227/Portfolio",
-    description: "今まさに開いているサイト",
-    introduction: [
+    overview: "今まさに開いているサイト",
+    description: [
       "自分のこれまでの活動、自分の紹介等を簡潔にまとめるためにポートフォリオを作りました。",
       "案外いいデザインに仕上がったと思っているので自己満しています。",
     ],
@@ -36,8 +36,8 @@ export const productList: ProductInfo[] = [
       width: 1920,
       height: 1080,
     },
-    description: "エンジニア向けの朝用ToDoアプリ",
-    introduction: [
+    overview: "エンジニア向けの朝用ToDoアプリ",
+    description: [
       "TechBowl主催のハッカソンにて開発したアプリです。",
       "ハッカソンのテーマは「朝弱いエンジニアのための何かを創れ」というものであり、朝専用のToDoアプリを開発しました。",
     ],
@@ -64,9 +64,9 @@ export const productList: ProductInfo[] = [
       width: 750,
       height: 1334,
     },
-    description:
+    overview:
       "「Re：ゼロから始める異世界生活」の最新話更新をお知らせする LINE Bot",
-    introduction: [
+    description: [
       "「小説家になろう」にて連載中の小説、通称”リゼロ”が更新されたときに、その旨を知らせてくれる LINE Bot を作りました。",
       "リゼロは不定期更新かつ、公式からのお知らせが特に無いため、こちらのアカウントを友だち登録しておくといち早く最新話を読むことができます。",
     ],
@@ -120,8 +120,8 @@ export const productList: ProductInfo[] = [
   //     width: 1920,
   //     height: 1080,
   //   },
-  //   description: "Qiita のトレンド記事を教えてくれる Alexa スキル",
-  //   introduction: [
+  //   overview: "Qiita のトレンド記事を教えてくれる Alexa スキル",
+  //   description: [
   //     "期間と記事数を教えると、該当する Qiita のトレンド記事を読み上げてくれます。",
   //   ],
   //   pointList: [
@@ -145,8 +145,8 @@ export const productList: ProductInfo[] = [
   //     width: 1920,
   //     height: 1080,
   //   },
-  //   description: "5人の女優を判別する LINE Bot",
-  //   introduction: [
+  //   overview: "5人の女優を判別する LINE Bot",
+  //   description: [
   //     "深層学習を組み込むことで画像認識を行う LINE Bot を作りました。",
   //     "こちらは深層学習を体系的に学んだ後に、アウトプットとして最初に実装したアプリです。",
   //     "仕組みとしては、LINE 側で受信した画像を一度保存し、その画像をあらかじめ学習しているモデルに通すことで、類似度を算出、返信するようになっています。",
