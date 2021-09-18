@@ -84,6 +84,35 @@ export const productList: ProductInfo[] = [
       },
     ],
   },
+  {
+    title: "換気促進アプリ",
+    image: {
+      src: "/product_images/co2-sensor.png",
+      width: 1920,
+      height: 1080,
+    },
+    description: "二酸化炭素濃度を検知して換気を促すIoTアプリ",
+    introduction: [
+      "HaitLab内で開催されたハッカソンにて開発したアプリです。",
+      "ハッカソンの条件は「Arduino・機械学習のいずれかを含むWebアプリケーションを作る」というものであり、Arduinoを用いたIoTアプリを開発しました。",
+    ],
+    pointList: [
+      "二酸化炭素センサとダストセンサの２つを使い、室内の空気の状態を定量化することで、換気のタイミングを合理的に決めることができるようにした。",
+      "Realtime Databaseを採用することで、室内の状態がリアルタイムでグラフ描画されるようになっている。",
+    ],
+    githubURL: "https://github.com/tksx1227/team1",
+    period: "3週間",
+    role: "Arduinoの回路設計、バックエンド",
+    memberNum: 3,
+    techList: [
+      { type: "デバイス", techs: ["Arduino"] },
+      {
+        type: "フロントエンド",
+        techs: ["TypeScript", "Next.js"],
+      },
+      { type: "バックエンド", techs: ["Python", "Firebase"] },
+    ],
+  },
   // {
   //   title: "Qiitaくん",
   //   image: {
