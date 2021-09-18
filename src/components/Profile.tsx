@@ -3,7 +3,7 @@ import Image from "next/image";
 export const Profile = () => {
   return (
     <section id="profile" className={"mb-28 mt-16 pt-8 md:mt-28 md:mb-52"}>
-      <div>
+      <div className={"tracking-wider"}>
         <p className={"text-indigo-800 text-lg font-semibold"}>PROFILE</p>
         <h2 className={"text-2xl font-bold tracking-wider md:text-3xl"}>
           プロフィール

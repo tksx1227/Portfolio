@@ -9,7 +9,7 @@ import {
 export const Skills = () => {
   return (
     <section id="skills" className={"mt-16 pt-8 md:mt-28"}>
-      <div>
+      <div className={"tracking-wider"}>
         <p className={"text-indigo-800 text-lg font-semibold"}>SKILLS</p>
         <h2 className={"text-2xl font-bold tracking-wider md:text-3xl"}>
           所有スキル
