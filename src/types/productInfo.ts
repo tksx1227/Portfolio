@@ -5,8 +5,8 @@ export type ProductInfo = {
     width: number;
     height: number;
   };
-  description: string;
-  introduction: string[];
+  overview: string;
+  description: string[];
   pointList: string[];
   githubURL: string;
   period: string;
