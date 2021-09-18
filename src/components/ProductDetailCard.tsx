@@ -82,7 +82,7 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
                 <span className={"font-bold"}>使用技術</span>：
                 {productInfo.techList.map((techInfo) => {
                   return (
-                    <div key={techInfo.type} className={"mb-4"}>
+                    <div key={techInfo.type} className={"mb-2 md:mb-4"}>
                       <p>{techInfo.type}</p>
                       <ul
                         className={
