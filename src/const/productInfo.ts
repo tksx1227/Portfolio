@@ -91,8 +91,8 @@ export const productList: ProductInfo[] = [
       width: 1920,
       height: 1080,
     },
-    description: "二酸化炭素濃度を検知して換気を促すIoTアプリ",
-    introduction: [
+    overview: "二酸化炭素濃度を検知して換気を促すIoTアプリ",
+    description: [
       "HaitLab内で開催されたハッカソンにて開発したアプリです。",
       "ハッカソンの条件は「Arduino・機械学習のいずれかを含むWebアプリケーションを作る」というものであり、Arduinoを用いたIoTアプリを開発しました。",
     ],
