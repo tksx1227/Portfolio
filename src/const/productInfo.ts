@@ -6,8 +6,8 @@ export const productList: ProductInfo[] = [
     githubURL: "https://github.com/tksx1227/Portfolio",
     overview: "今まさに開いているサイト",
     description: [
-      "自分のこれまでの活動、自分の紹介等を簡潔にまとめるためにポートフォリオを作りました。",
-      "案外いいデザインに仕上がったと思っているので自己満しています。",
+      "自分のこれまでの活動、自己紹介等を簡潔にまとめるためにポートフォリオを作りました。",
+      "ダークモードも実装しているため、是非双方の確認をしてみてください（ダークモードは OS 依存で設定）。",
     ],
     pointList: [
       "学び始めて日の浅い技術をメインで使ってみた（Next.js, Tailwind CSS）。",
@@ -43,7 +43,7 @@ export const productList: ProductInfo[] = [
     ],
     pointList: [
       "明るい色をメインで使い、タスクを付箋用紙のようなデザインすることで、全体的に柔らかい雰囲気のUIになるように心がけた。",
-      "達成したタスクの個数に応じて、GitHub を模した形でログを残し、視覚的にもモチベーションを保てるようにした。",
+      "達成したタスクの個数に応じて GitHub を模した形でログを残し、視覚的にもモチベーションを保てるようにした。",
     ],
     githubURL: "https://github.com/tksx1227/Morning-To-Do",
     period: "3週間",
@@ -91,13 +91,13 @@ export const productList: ProductInfo[] = [
       width: 1920,
       height: 1080,
     },
-    overview: "二酸化炭素濃度を検知して換気を促すIoTアプリ",
+    overview: "室内の空気の状態を定量化して換気を促すIoTアプリ",
     description: [
       "HAIT Lab 内で開催されたハッカソンにて開発したアプリです。",
       "ハッカソンの条件は「Arduino・機械学習のいずれかを含むWebアプリケーションを作る」というものであり、Arduinoを用いたIoTアプリを開発しました。",
     ],
     pointList: [
-      "二酸化炭素センサとダストセンサの２つを使い、室内の空気の状態を定量化することで、換気のタイミングを合理的に決めることができる。",
+      "二酸化炭素センサとダストセンサの２つを使って室内の空気の状態を定量化することで、換気のタイミングを合理的に決定することができる。",
       "Realtime Databaseを採用することで、室内の状態がリアルタイムでグラフ描画されるようになっている。",
     ],
     githubURL: "https://github.com/tksx1227/team1",
