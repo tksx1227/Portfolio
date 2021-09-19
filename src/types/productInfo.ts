@@ -1,6 +1,6 @@
 export type ProductInfo = {
   title: string;
-  image: {
+  images: {
     src: string;
     width: number;
     height: number;

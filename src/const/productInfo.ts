@@ -13,9 +13,14 @@ export const productList: ProductInfo[] = [
       "学び始めて日の浅い技術をメインで使ってみた（Next.js, Tailwind CSS）。",
       "自分が綺麗だと思うデザインを Figma で作ってみて、そのラフ案を実装するまで短期間で行った（背景画像も自作）。",
     ],
-    image: [
+    images: [
       {
-        src: "/product_images/portfolio.png",
+        src: "/product_images/portfolio1.png",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/product_images/portfolio2.png",
         width: 1920,
         height: 1080,
       },
@@ -33,7 +38,7 @@ export const productList: ProductInfo[] = [
   },
   {
     title: "Morning To Do",
-    image: [
+    images: [
       {
         src: "/product_images/morning-to-do1.png",
         width: 1920,
@@ -68,7 +73,7 @@ export const productList: ProductInfo[] = [
   },
   {
     title: "リゼロ新着通知Bot",
-    image: [
+    images: [
       {
         src: "/product_images/rezero-notification-bot.jpg",
         width: 750,
@@ -97,7 +102,7 @@ export const productList: ProductInfo[] = [
   },
   {
     title: "換気促進アプリ",
-    image: [
+    images: [
       {
         src: "/product_images/co2-sensor1.png",
         width: 1920,
