@@ -26,11 +26,11 @@ export const ProductCard = (props: Props) => {
         <div>
           <div className={"flex product-card-img rounded overflow-hidden"}>
             <Image
-              src={productInfo.image[0].src}
+              src={productInfo.images[0].src}
               alt={productInfo.title}
               objectFit="contain"
-              width={productInfo.image[0].width}
-              height={productInfo.image[0].height}
+              width={productInfo.images[0].width}
+              height={productInfo.images[0].height}
             />
           </div>
         </div>
@@ -67,7 +67,7 @@ export const ProductCard = (props: Props) => {
                 target="_brank"
                 title="Github"
                 className={
-                  "text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-200"
+                  "text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-300"
                 }
               >
                 こちら
