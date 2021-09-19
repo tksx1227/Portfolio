@@ -19,7 +19,11 @@ export const SkillsCard = (props: Props) => {
 
   return (
     <div>
-      <h3 className={"font-bold text-xl text-indigo-900 tracking-wide pb-2"}>
+      <h3
+        className={
+          "font-bold text-2xl text-indigo-900 tracking-wide pb-2 dark:text-indigo-300"
+        }
+      >
         {title}
       </h3>
       <div

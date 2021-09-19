@@ -7,14 +7,20 @@ export const Products = () => {
   return (
     <section id="products" className={"mt-16 pt-8 md:mt-28"}>
       <div className={"tracking-wider"}>
-        <p className={"text-indigo-800 text-lg font-semibold"}>PRODUCTS</p>
+        <p
+          className={
+            "text-lg font-semibold text-indigo-800 dark:text-indigo-300"
+          }
+        >
+          PRODUCTS
+        </p>
         <h2 className={"text-2xl font-bold tracking-wider md:text-3xl"}>
           制作物
         </h2>
       </div>
       <div
         className={
-          "glass-container mt-8 px-6 py-10 space-y-24 md:space-y-40 md:px-10"
+          "glass-container-light mt-8 px-6 py-10 space-y-24 md:space-y-40 md:px-10 dark:glass-container-dark"
         }
       >
         <ProductCard

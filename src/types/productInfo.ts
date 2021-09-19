@@ -4,7 +4,7 @@ export type ProductInfo = {
     src: string;
     width: number;
     height: number;
-  };
+  }[];
   overview: string;
   description: string[];
   pointList: string[];
