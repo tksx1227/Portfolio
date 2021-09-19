@@ -41,7 +41,7 @@ const ProductsDetail = () => {
             <div className={"text-center"}>
               <p
                 className={
-                  "inline-block bg-white bg-opacity-50 rounded shadow-lg px-12 py-4 cursor-default dark:bg-base-dark"
+                  "inline-block bg-white bg-opacity-50 rounded shadow-lg px-12 py-4 cursor-default dark:bg-dark-base dark:shadow-dark-lg"
                 }
               >
                 \\ 随時更新中 //

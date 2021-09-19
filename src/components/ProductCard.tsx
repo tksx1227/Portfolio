@@ -67,7 +67,7 @@ export const ProductCard = (props: Props) => {
                 target="_brank"
                 title="Github"
                 className={
-                  "text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-300"
+                  "text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-200"
                 }
               >
                 こちら
