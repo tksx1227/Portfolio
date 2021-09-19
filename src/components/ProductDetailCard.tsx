@@ -7,7 +7,11 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
 
   return (
     <div>
-      <h3 className={"text-3xl font-bold mb-4 text-indigo-700"}>
+      <h3
+        className={
+          "text-3xl text-indigo-700 font-bold mb-4 dark:text-indigo-300"
+        }
+      >
         {productInfo.title}
       </h3>
       <div
@@ -86,7 +90,7 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
                     target="_brank"
                     title="Github"
                     className={
-                      "transition duration-200 text-blue-600 hover:opacity-60"
+                      "text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-300"
                     }
                   >
                     こちら

@@ -4,7 +4,7 @@ export const Header = () => {
   return (
     <header
       className={
-        "font-semibold bg-white absolute w-full p-6 border-b-2 md:text-lg md:p-10 md:flex md:flex-row md:justify-between"
+        "font-semibold bg-white absolute w-full p-6 border-b-2 md:text-lg md:p-10 md:flex md:flex-row md:justify-between dark:bg-dark-header"
       }
     >
       <div className={"hidden md:block"}></div>
