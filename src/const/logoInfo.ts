@@ -22,7 +22,7 @@ export const frameworkLogoList = {
     { src: "/logos/tensorflow.svg", alt: "tensorflow" },
   ],
   learning: [
-    { src: "/logos/nextjs.svg", alt: "nest.js" },
+    { src: "/logos/nextjs.svg", alt: "next.js" },
 
     { src: "/logos/electron.svg", alt: "electron" },
   ],
