@@ -14,7 +14,7 @@ export const Top = () => {
       <p className={"text-gray-400"}>JAPAN FUKUOKA</p>
       <div
         className={
-          "glass-container mt-8 p-6 text-left text-sm leading-relaxed tracking-widest md:p-10 md:text-center md:text-base"
+          "glass-container-light mt-8 p-6 text-left text-sm leading-relaxed tracking-widest md:p-10 md:text-center md:text-base dark:glass-container-dark"
         }
       >
         <p>地方の情報系大学3年生</p>

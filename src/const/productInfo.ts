@@ -13,11 +13,13 @@ export const productList: ProductInfo[] = [
       "学び始めて日の浅い技術をメインで使ってみた（Next.js, Tailwind CSS）。",
       "自分が綺麗だと思うデザインを Figma で作ってみて、そのラフ案を実装するまで短期間で行った（背景画像も自作）。",
     ],
-    image: {
-      src: "/product_images/portfolio.png",
-      width: 1920,
-      height: 1080,
-    },
+    image: [
+      {
+        src: "/product_images/portfolio.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
     period: "3日",
     memberNum: 1,
     role: "デザイン, 設計, 実装",
@@ -31,11 +33,18 @@ export const productList: ProductInfo[] = [
   },
   {
     title: "Morning To Do",
-    image: {
-      src: "/product_images/morning-to-do.png",
-      width: 1920,
-      height: 1080,
-    },
+    image: [
+      {
+        src: "/product_images/morning-to-do1.png",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/product_images/morning-to-do2.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
     overview: "エンジニア向けの朝用ToDoアプリ",
     description: [
       "TechBowl主催のハッカソンにて開発したアプリです。",
@@ -59,11 +68,13 @@ export const productList: ProductInfo[] = [
   },
   {
     title: "リゼロ新着通知Bot",
-    image: {
-      src: "/product_images/rezero-notification-bot.jpg",
-      width: 750,
-      height: 1334,
-    },
+    image: [
+      {
+        src: "/product_images/rezero-notification-bot.jpg",
+        width: 750,
+        height: 1334,
+      },
+    ],
     overview:
       "「Re：ゼロから始める異世界生活」の最新話更新をお知らせする LINE Bot",
     description: [
@@ -86,11 +97,18 @@ export const productList: ProductInfo[] = [
   },
   {
     title: "換気促進アプリ",
-    image: {
-      src: "/product_images/co2-sensor.png",
-      width: 1920,
-      height: 1080,
-    },
+    image: [
+      {
+        src: "/product_images/co2-sensor1.png",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/product_images/co2-sensor2.jpg",
+        width: 1920,
+        height: 1080,
+      },
+    ],
     overview: "室内の空気の状態を定量化して換気を促すIoTアプリ",
     description: [
       "HAIT Lab 内で開催されたハッカソンにて開発したアプリです。",

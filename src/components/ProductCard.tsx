@@ -15,18 +15,22 @@ export const ProductCard = (props: Props) => {
         isEven ? "" : "md:flex-row-reverse"
       }`}
     >
-      <h3 className={"block text-2xl mb-6 font-bold text-indigo-700 md:hidden"}>
+      <h3
+        className={
+          "text-indigo-700 block text-2xl mb-6 font-bold md:hidden dark:text-indigo-300"
+        }
+      >
         {productInfo.title}
       </h3>
       <div className={"md:w-2/3 flex justify-center"}>
         <div>
           <div className={"flex product-card-img rounded overflow-hidden"}>
             <Image
-              src={productInfo.image.src}
+              src={productInfo.image[0].src}
               alt={productInfo.title}
               objectFit="contain"
-              width={productInfo.image.width}
-              height={productInfo.image.height}
+              width={productInfo.image[0].width}
+              height={productInfo.image[0].height}
             />
           </div>
         </div>
@@ -37,7 +41,11 @@ export const ProductCard = (props: Props) => {
         }`}
       >
         <div className={"text-left md:inline-block"}>
-          <p className={"hidden text-xl font-bold text-indigo-700 md:block"}>
+          <p
+            className={
+              "hidden text-xl text-indigo-700 font-bold md:block dark:text-indigo-300"
+            }
+          >
             {productInfo.title}
           </p>
           <p className={"mb-6"}>{productInfo.overview}</p>
@@ -59,7 +67,7 @@ export const ProductCard = (props: Props) => {
                 target="_brank"
                 title="Github"
                 className={
-                  "transition duration-200 text-blue-600 hover:opacity-60"
+                  "text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-200"
                 }
               >
                 こちら

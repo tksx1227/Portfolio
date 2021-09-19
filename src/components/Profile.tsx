@@ -4,12 +4,22 @@ export const Profile = () => {
   return (
     <section id="profile" className={"mb-28 mt-16 pt-8 md:mt-28 md:mb-52"}>
       <div className={"tracking-wider"}>
-        <p className={"text-indigo-800 text-lg font-semibold"}>PROFILE</p>
+        <p
+          className={
+            "text-lg font-semibold text-indigo-800 dark:text-indigo-300"
+          }
+        >
+          PROFILE
+        </p>
         <h2 className={"text-2xl font-bold tracking-wider md:text-3xl"}>
           プロフィール
         </h2>
       </div>
-      <div className={"glass-container mt-8 py-10 px-6 md:px-10"}>
+      <div
+        className={
+          "glass-container-light mt-8 py-10 px-6 md:px-10 dark:glass-container-dark"
+        }
+      >
         <div
           className={
             "flex flex-col md:flex-row md:justify-around md:space-x-10"
@@ -46,7 +56,7 @@ export const Profile = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={
-                      "transition duration-200 text-gray-400 fill-current hover:text-indigo-400"
+                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-gray-400"
                     }
                   >
                     <path
@@ -69,7 +79,7 @@ export const Profile = () => {
                     viewBox="0 0 35 35"
                     xmlns="http://www.w3.org/2000/svg"
                     className={
-                      "transition duration-200 text-gray-400 fill-current hover:text-indigo-400"
+                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-gray-400"
                     }
                   >
                     <path d="M17.5008 34.9997C27.1657 34.9997 35.0007 27.1647 35.0007 17.4998C35.0007 7.83495 27.1657 0 17.5008 0C7.83595 0 0.00100708 7.83495 0.00100708 17.4998C0.00100708 27.1647 7.83595 34.9997 17.5008 34.9997Z" />
@@ -92,7 +102,7 @@ export const Profile = () => {
                     viewBox="0 0 35 35"
                     xmlns="http://www.w3.org/2000/svg"
                     className={
-                      "transition duration-200 text-gray-400 fill-current hover:text-indigo-400"
+                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-gray-400"
                     }
                   >
                     <rect width="35" height="35" rx="17.5" />
@@ -105,7 +115,9 @@ export const Profile = () => {
               </div>
             </div>
           </div>
-          <div className={"border border-gray-300 mb-6 md:mb-0"}></div>
+          <div
+            className={"border border-gray-300 bg-gray-300 mb-6 md:mb-0"}
+          ></div>
           <div>
             <p className={"text-sm leading-relaxed md:text-base"}>
               地方の情報系大学に通う大学3年生

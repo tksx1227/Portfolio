@@ -7,7 +7,11 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
 
   return (
     <div>
-      <h3 className={"text-3xl font-bold mb-4 text-indigo-700"}>
+      <h3
+        className={
+          "text-3xl text-indigo-700 font-bold mb-4 dark:text-indigo-300"
+        }
+      >
         {productInfo.title}
       </h3>
       <div
@@ -16,17 +20,32 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
         }
       ></div>
       <div className={"flex flex-col md:flex-row"}>
-        <div className={"md:w-1/2 flex justify-center"}>
-          <div>
+        <div className={"md:w-1/2 flex flex-row justify-center"}>
+          <div className={"flex flex-col space-y-8"}>
             <div className={"flex product-card-img rounded overflow-hidden"}>
               <Image
-                src={productInfo.image.src}
-                alt={productInfo.title}
+                src={productInfo.image[0].src}
+                alt={productInfo.title + 1}
                 objectFit="contain"
-                width={productInfo.image.width}
-                height={productInfo.image.height}
+                width={productInfo.image[0].width}
+                height={productInfo.image[0].height}
               />
             </div>
+            {productInfo.image.length > 1 && (
+              <div
+                className={
+                  "hidden product-card-img rounded overflow-hidden md:flex"
+                }
+              >
+                <Image
+                  src={productInfo.image[1].src}
+                  alt={productInfo.title + 2}
+                  objectFit="contain"
+                  width={productInfo.image[1].width}
+                  height={productInfo.image[1].height}
+                />
+              </div>
+            )}
           </div>
         </div>
         <div
@@ -71,7 +90,7 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
                     target="_brank"
                     title="Github"
                     className={
-                      "transition duration-200 text-blue-600 hover:opacity-60"
+                      "text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-200"
                     }
                   >
                     こちら
