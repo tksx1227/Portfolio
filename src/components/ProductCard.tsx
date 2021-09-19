@@ -22,11 +22,11 @@ export const ProductCard = (props: Props) => {
         <div>
           <div className={"flex product-card-img rounded overflow-hidden"}>
             <Image
-              src={productInfo.image.src}
+              src={productInfo.image[0].src}
               alt={productInfo.title}
               objectFit="contain"
-              width={productInfo.image.width}
-              height={productInfo.image.height}
+              width={productInfo.image[0].width}
+              height={productInfo.image[0].height}
             />
           </div>
         </div>
