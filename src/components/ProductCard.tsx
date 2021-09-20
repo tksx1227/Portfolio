@@ -15,13 +15,20 @@ export const ProductCard = (props: Props) => {
         isEven ? "" : "md:flex-row-reverse"
       }`}
     >
-      <h3
-        className={
-          "text-indigo-700 block text-2xl mb-6 font-bold md:hidden dark:text-indigo-300"
-        }
-      >
-        {productInfo.title}
-      </h3>
+      <div className={"block md:hidden"}>
+        <h3
+          className={
+            "text-indigo-700 text-2xl mb-6 font-bold dark:text-indigo-300"
+          }
+        >
+          {productInfo.title}
+        </h3>
+        <div
+          className={
+            "mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300 md:mb-12"
+          }
+        ></div>
+      </div>
       <div className={"md:w-2/3 flex justify-center"}>
         <div>
           <div className={"flex product-card-img rounded overflow-hidden"}>
