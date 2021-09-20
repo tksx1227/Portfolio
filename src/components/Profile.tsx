@@ -26,13 +26,20 @@ export const Profile = () => {
           }
         >
           <div className={"flex-shrink-0 text-center"}>
-            <Image
-              src="/user-icon.jpg"
-              alt="Profile Icon"
-              className={"rounded-full mx-auto"}
-              width={150}
-              height={150}
-            />
+            <div className={"flex justify-center"}>
+              <div
+                className={
+                  "rounded-full flex border-2 border-gray-400 overflow-hidden"
+                }
+              >
+                <Image
+                  src="/profile-image.jpg"
+                  alt="Profile Icon"
+                  width={150}
+                  height={150}
+                />
+              </div>
+            </div>
             <p
               className={"text-lg font-medium text-center mt-4 tracking-wider"}
             >
@@ -56,7 +63,7 @@ export const Profile = () => {
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
                     className={
-                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-gray-400"
+                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-indigo-300"
                     }
                   >
                     <path
@@ -79,7 +86,7 @@ export const Profile = () => {
                     viewBox="0 0 35 35"
                     xmlns="http://www.w3.org/2000/svg"
                     className={
-                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-gray-400"
+                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-indigo-300"
                     }
                   >
                     <path d="M17.5008 34.9997C27.1657 34.9997 35.0007 27.1647 35.0007 17.4998C35.0007 7.83495 27.1657 0 17.5008 0C7.83595 0 0.00100708 7.83495 0.00100708 17.4998C0.00100708 27.1647 7.83595 34.9997 17.5008 34.9997Z" />
@@ -102,7 +109,7 @@ export const Profile = () => {
                     viewBox="0 0 35 35"
                     xmlns="http://www.w3.org/2000/svg"
                     className={
-                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-gray-400"
+                      "transition duration-200 fill-current text-gray-400 hover:text-indigo-400 dark:text-gray-500 dark:hover:text-indigo-300"
                     }
                   >
                     <rect width="35" height="35" rx="17.5" />
