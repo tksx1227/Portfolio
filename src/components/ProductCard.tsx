@@ -18,7 +18,7 @@ export const ProductCard = (props: Props) => {
       <div className={"block md:hidden"}>
         <h3
           className={
-            "text-indigo-700 text-2xl mb-6 font-bold dark:text-indigo-300"
+            "text-indigo-700 text-2xl mb-3 font-bold dark:text-indigo-300"
           }
         >
           {productInfo.title}
