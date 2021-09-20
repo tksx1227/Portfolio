@@ -12,6 +12,7 @@ export const Top = () => {
           <Image
             src="/profile-image.jpg"
             alt="Profile Icon"
+            className={"rounded-full"}
             width={150}
             height={150}
           />
