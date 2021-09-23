@@ -2,6 +2,38 @@ import { ProductInfo } from "../types/productInfo";
 
 export const productList: ProductInfo[] = [
   {
+    title: "Nice Doc Generator",
+    githubURL: "https://github.com/tksx1227/nice-doc-generator",
+    overview: "入力された文章をいい感じに変換するアプリ",
+    description: [
+      "DeepLを用いて、入力された文章を一度英語に訳し、その結果を再度日本語に訳すことで、文章をいい感じに変換します。",
+      "使用場面としては、「文章の体裁を整えたいとき」、「不適切な文法を修正したいとき」などが挙げられます。",
+    ],
+    pointList: ["ニューモフィズムデザインを採用している"],
+    images: [
+      {
+        src: "/product_images/nice-doc-generator1.png",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/product_images/nice-doc-generator2.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    period: "1日",
+    memberNum: 1,
+    role: "デザイン, 設計, 実装",
+    techList: [
+      {
+        type: "フロントエンド",
+        techs: ["TypeScript", "Next.js", "Tailwind CSS"],
+      },
+      { type: "デザイン", techs: ["Figma"] },
+    ],
+  },
+  {
     title: "Portfolio",
     githubURL: "https://github.com/tksx1227/Portfolio",
     overview: "今まさに開いているサイト",
@@ -34,6 +66,36 @@ export const productList: ProductInfo[] = [
         techs: ["TypeScript", "Next.js", "Tailwind CSS"],
       },
       { type: "デザイン", techs: ["Figma"] },
+    ],
+  },
+
+  {
+    title: "リゼロ新着通知Bot",
+    images: [
+      {
+        src: "/product_images/rezero-notification-bot.jpg",
+        width: 750,
+        height: 1334,
+      },
+    ],
+    overview:
+      "「Re：ゼロから始める異世界生活」の最新話更新をお知らせする LINE Bot",
+    description: [
+      "「小説家になろう」にて連載中の小説、通称”リゼロ”が更新されたときに、その旨を知らせてくれる LINE Bot を作りました。",
+      "リゼロは不定期更新かつ、公式からのお知らせが特に無いため、こちらのアカウントを友だち登録しておくといち早く最新話を読むことができます。",
+    ],
+    pointList: [
+      "Cloud Functions の TimeScheduler を使用し、5分毎に更新を確認することで、更新後すぐに通知を飛ばすことができる。",
+    ],
+    githubURL: "https://github.com/tksx1227/rezero-notification-bot",
+    period: "2日",
+    role: "設計, 実装",
+    memberNum: 1,
+    techList: [
+      {
+        type: "バックエンド",
+        techs: ["Node.js", "TypeScript", "Cloud Functions", "Firestore"],
+      },
     ],
   },
   {
@@ -69,35 +131,6 @@ export const productList: ProductInfo[] = [
         techs: ["HTML", "CSS", "JavaScript", "jQuery"],
       },
       { type: "バックエンド", techs: ["PHP", "MySQL"] },
-    ],
-  },
-  {
-    title: "リゼロ新着通知Bot",
-    images: [
-      {
-        src: "/product_images/rezero-notification-bot.jpg",
-        width: 750,
-        height: 1334,
-      },
-    ],
-    overview:
-      "「Re：ゼロから始める異世界生活」の最新話更新をお知らせする LINE Bot",
-    description: [
-      "「小説家になろう」にて連載中の小説、通称”リゼロ”が更新されたときに、その旨を知らせてくれる LINE Bot を作りました。",
-      "リゼロは不定期更新かつ、公式からのお知らせが特に無いため、こちらのアカウントを友だち登録しておくといち早く最新話を読むことができます。",
-    ],
-    pointList: [
-      "Cloud Functions の TimeScheduler を使用し、5分毎に更新を確認することで、更新後すぐに通知を飛ばすことができる。",
-    ],
-    githubURL: "https://github.com/tksx1227/rezero-notification-bot",
-    period: "2日",
-    role: "設計, 実装",
-    memberNum: 1,
-    techList: [
-      {
-        type: "バックエンド",
-        techs: ["Node.js", "TypeScript", "Cloud Functions", "Firestore"],
-      },
     ],
   },
   {
