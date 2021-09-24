@@ -23,7 +23,6 @@ export const frameworkLogoList = {
   ],
   learning: [
     { src: "/logos/nextjs.svg", alt: "next.js" },
-
     { src: "/logos/electron.svg", alt: "electron" },
   ],
 };

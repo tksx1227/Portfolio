@@ -1,9 +1,16 @@
 import Image from "next/image";
+import { useState } from "react";
 
 import { ProductInfo } from "../types/productInfo";
 
 export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
+  const [imgIndex, setImgIndex] = useState(0);
   const { productInfo } = props;
+
+  const onClickMobileImg = () => {
+    const imgCount = productInfo.images.length;
+    setImgIndex((prevState) => (prevState + 1) % imgCount);
+  };
 
   return (
     <div>
@@ -21,31 +28,37 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
       ></div>
       <div className={"flex flex-col md:flex-row"}>
         <div className={"md:w-1/2 flex flex-row justify-center"}>
-          <div className={"flex flex-col space-y-8"}>
+          <div
+            onClick={onClickMobileImg}
+            className={"flex flex-col space-y-8 block md:hidden"}
+          >
             <div className={"flex product-card-img rounded overflow-hidden"}>
               <Image
-                src={productInfo.images[0].src}
-                alt={productInfo.title + 1}
+                src={productInfo.images[imgIndex].src}
+                alt={productInfo.title + (imgIndex + 1)}
                 objectFit="contain"
-                width={productInfo.images[0].width}
-                height={productInfo.images[0].height}
+                width={productInfo.images[imgIndex].width}
+                height={productInfo.images[imgIndex].height}
               />
             </div>
-            {productInfo.images.length > 1 && (
-              <div
-                className={
-                  "hidden product-card-img rounded overflow-hidden md:flex"
-                }
-              >
-                <Image
-                  src={productInfo.images[1].src}
-                  alt={productInfo.title + 2}
-                  objectFit="contain"
-                  width={productInfo.images[1].width}
-                  height={productInfo.images[1].height}
-                />
-              </div>
-            )}
+          </div>
+          <div className={"flex flex-col space-y-8 hidden md:block"}>
+            {productInfo.images.map((img, index) => {
+              return (
+                <div
+                  key={img.src}
+                  className={"flex product-card-img rounded overflow-hidden"}
+                >
+                  <Image
+                    src={img.src}
+                    alt={productInfo.title + (index + 1)}
+                    objectFit="contain"
+                    width={img.width}
+                    height={img.height}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
         <div
@@ -62,12 +75,16 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
                 <p key={text}>{text}</p>
               ))}
               <br />
-              <p className={"tracking-wider"}>主なポイント</p>
-              <ul className={"list-disc space-y-2"}>
-                {productInfo.pointList.map((point) => (
-                  <li key={point}>{point}</li>
-                ))}
-              </ul>
+              {productInfo.pointList.length > 0 && (
+                <>
+                  <p className={"tracking-wider"}>主なポイント</p>
+                  <ul className={"list-disc space-y-2"}>
+                    {productInfo.pointList.map((point) => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                </>
+              )}
             </div>
             <div>
               <p className={"text-xl font-semibold mt-8 mb-2"}>基本情報</p>

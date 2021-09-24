@@ -9,7 +9,7 @@ export const productList: ProductInfo[] = [
       "DeepLを用いて、入力された文章を一度英語に訳し、その結果を再度日本語に訳すことで、文章をいい感じに変換します。",
       "使用場面としては、「文章の体裁を整えたいとき」、「不適切な文法を修正したいとき」などが挙げられます。",
     ],
-    pointList: ["ニューモフィズムデザインを採用している"],
+    pointList: [],
     images: [
       {
         src: "/product_images/nice-doc-generator1.png",
@@ -68,7 +68,6 @@ export const productList: ProductInfo[] = [
       { type: "デザイン", techs: ["Figma"] },
     ],
   },
-
   {
     title: "リゼロ新着通知Bot",
     images: [
