@@ -28,10 +28,7 @@ export const ProductDetailCard = (props: { productInfo: ProductInfo }) => {
       ></div>
       <div className={"flex flex-col md:flex-row"}>
         <div className={"md:w-1/2 flex flex-row justify-center"}>
-          <div
-            onClick={onClickMobileImg}
-            className={"flex flex-col space-y-8 block md:hidden"}
-          >
+          <div onClick={onClickMobileImg} className={"block md:hidden"}>
             <div className={"flex product-card-img rounded overflow-hidden"}>
               <Image
                 src={productInfo.images[imgIndex].src}
