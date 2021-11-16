@@ -17,12 +17,12 @@ export const languageLogoList = {
 
 export const frameworkLogoList = {
   available: [
+    { src: "/logos/nextjs.svg", alt: "next.js" },
     { src: "/logos/flutter.svg", alt: "flutter" },
     { src: "/logos/pytorch.svg", alt: "pytorch" },
     { src: "/logos/tensorflow.svg", alt: "tensorflow" },
   ],
   learning: [
-    { src: "/logos/nextjs.svg", alt: "next.js" },
     { src: "/logos/electron.svg", alt: "electron" },
   ],
 };
