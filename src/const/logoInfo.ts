@@ -10,8 +10,8 @@ export const languageLogoList = {
     { src: "/logos/typescript.svg", alt: "typescript" },
   ],
   learning: [
-    { src: "/logos/csharp.svg", alt: "csharp" },
     { src: "/logos/nodejs.svg", alt: "node.js" },
+    { src: "/logos/graphql.svg", alt: "graphql" },
   ],
 };
 
