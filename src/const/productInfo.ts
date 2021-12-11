@@ -2,6 +2,41 @@ import { ProductInfo } from "../types/productInfo";
 
 export const productList: ProductInfo[] = [
   {
+    title: "DiSH",
+    githubURL: "https://github.com/KIT-DiSH/dish",
+    overview: "",
+    description: [
+      "",
+    ],
+    pointList: [],
+    images: [
+      {
+        src: "/product_images/dish1.png",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/product_images/dish2.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    period: "4か月",
+    memberNum: 3,
+    role: "デザイン, 設計, 実装",
+    techList: [
+      {
+        type: "フロントエンド",
+        techs: ["Flutter", "Google Map"],
+      },
+      {
+        type: "バックエンド",
+        techs: ["Authentication", "Firestore", "Cloud Storage"],
+      },
+      { type: "デザイン", techs: ["Figma"] },
+    ],
+  },
+  {
     title: "Nice Doc Generator",
     githubURL: "https://github.com/tksx1227/nice-doc-generator",
     overview: "入力された文章をいい感じに変換するアプリ",
