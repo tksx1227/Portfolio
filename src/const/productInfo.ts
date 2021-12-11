@@ -4,11 +4,16 @@ export const productList: ProductInfo[] = [
   {
     title: "DiSH",
     githubURL: "https://github.com/KIT-DiSH/dish",
-    overview: "",
+    overview: "ユーザー発信型の飲食店レビューSNSアプリ",
     description: [
-      "",
+      "九州アプリチャレンジ・キャラバン2021にて開発したアプリであり、企業賞としてサイバーエージェント賞を受賞しました。",
+      "DiSHは「ランチタイムを豊かに」というコンセプトをもとに開発したアプリであり、ユーザー発信型のレビューSNSアプリです。",
+      "DiSHを使うことで、「友人がオススメしているお店」に出会うことができ、外食先選びに悩むことがなくなります。",
     ],
-    pointList: [],
+    pointList: [
+      "SNSを投稿する感覚でレビューを書いてもらえるので、等身大の評価が現れやすくなっている。",
+      "事前にデザインを Figma で作り込んでから実装フェーズにシフトすることで、デザインに関する手戻りが生じないようにした。",
+    ],
     images: [
       {
         src: "/product_images/dish1.png",
@@ -31,7 +36,7 @@ export const productList: ProductInfo[] = [
       },
       {
         type: "バックエンド",
-        techs: ["Authentication", "Firestore", "Cloud Storage"],
+        techs: ["Firestore", "Cloud Storage", "Authentication"],
       },
       { type: "デザイン", techs: ["Figma"] },
     ],
