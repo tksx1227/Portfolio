@@ -2,6 +2,47 @@ import { ProductInfo } from "../types/productInfo";
 
 export const productList: ProductInfo[] = [
   {
+    title: "DiSH",
+    githubURL: "https://github.com/KIT-DiSH/dish",
+    overview: "ユーザー発信型の飲食店レビューSNSアプリ",
+    description: [
+      "九州アプリチャレンジ・キャラバン2021にて開発したアプリであり、企業賞としてサイバーエージェント賞を受賞しました。",
+      "DiSHは「ランチタイムを豊かに」というコンセプトをもとに開発したアプリであり、ユーザー発信型のレビューSNSアプリです。",
+      "本アプリを使うことで、「友人がオススメしているお店」に出会うことができ、外食先選びに悩むことがなくなります。",
+    ],
+    pointList: [
+      "SNSを投稿する感覚でレビューを書いてもらえるので、等身大の評価が現れやすくなっている。",
+      "現在地情報とマップを使うことで、周囲にある「友人がオススメしているお店」をサクッと探すことができる。",
+      "事前にデザインを Figma で作り込んでから実装フェーズにシフトすることで、デザインに関する手戻りが生じないようにした。",
+    ],
+    images: [
+      {
+        src: "/product_images/dish1.png",
+        width: 1920,
+        height: 1080,
+      },
+      {
+        src: "/product_images/dish2.png",
+        width: 1920,
+        height: 1080,
+      },
+    ],
+    period: "4か月",
+    memberNum: 3,
+    role: "デザイン, 設計, 実装",
+    techList: [
+      {
+        type: "フロントエンド",
+        techs: ["Flutter", "Google Map"],
+      },
+      {
+        type: "バックエンド",
+        techs: ["Firestore", "Cloud Storage", "Authentication"],
+      },
+      { type: "デザイン", techs: ["Figma"] },
+    ],
+  },
+  {
     title: "Nice Doc Generator",
     githubURL: "https://github.com/tksx1227/nice-doc-generator",
     overview: "入力された文章をいい感じに変換するアプリ",
