@@ -39,5 +39,8 @@ export const othersLogoList = {
     { src: "/logos/chakraui.svg", alt: "chakraui" },
     { src: "/logos/tailwindcss.svg", alt: "tailwindcss" },
   ],
-  learning: [{ src: "/logos/unity.svg", alt: "unity" }],
+  learning: [
+    { src: "/logos/unity.svg", alt: "unity" },
+    { src: "/logos/docker.svg", alt: "docker"},
+  ],
 };
