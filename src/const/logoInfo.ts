@@ -8,10 +8,11 @@ export const languageLogoList = {
     { src: "/logos/python.svg", alt: "python" },
     { src: "/logos/javascript.svg", alt: "javascript" },
     { src: "/logos/typescript.svg", alt: "typescript" },
+    { src: "/logos/nodejs.svg", alt: "node.js" },
   ],
   learning: [
+    { src: "/logos/kotlin.svg", alt: "kotlin" },
     { src: "/logos/golang.svg", alt: "golang" },
-    { src: "/logos/nodejs.svg", alt: "node.js" },
     { src: "/logos/graphql.svg", alt: "graphql" },
   ],
 };
@@ -39,9 +40,9 @@ export const othersLogoList = {
     { src: "/logos/firebase.svg", alt: "firebase" },
     { src: "/logos/chakraui.svg", alt: "chakraui" },
     { src: "/logos/tailwindcss.svg", alt: "tailwindcss" },
+    { src: "/logos/docker.svg", alt: "docker" },
   ],
   learning: [
     { src: "/logos/unity.svg", alt: "unity" },
-    { src: "/logos/docker.svg", alt: "docker"},
   ],
 };
