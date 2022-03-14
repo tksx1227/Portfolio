@@ -23,6 +23,7 @@ export const frameworkLogoList = {
     { src: "/logos/flutter.svg", alt: "flutter" },
     { src: "/logos/pytorch.svg", alt: "pytorch" },
     { src: "/logos/tensorflow.svg", alt: "tensorflow" },
+    { src: "/logos/express.svg", alt: "express" },
   ],
   learning: [
     { src: "/logos/electron.svg", alt: "electron" },
