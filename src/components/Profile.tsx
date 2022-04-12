@@ -128,7 +128,7 @@ export const Profile = () => {
           ></div>
           <div>
             <p className={"text-sm leading-relaxed md:text-base"}>
-              地方の情報系大学に通う大学3年生
+              地方の情報系大学に通う学部4年生
               <br />
               <br />
               幼い頃からモノづくりが好きで、親から工学系に進むといいと吹き込まれる。
