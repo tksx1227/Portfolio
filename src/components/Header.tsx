@@ -1,14 +1,25 @@
 import Link from "next/link";
 import { useTheme } from "next-themes"
-import { SunIcon } from '@heroicons/react/solid';
-import { MoonIcon } from '@heroicons/react/solid';
+import { SunIcon } from "@heroicons/react/solid";
+import { MoonIcon } from "@heroicons/react/solid";
+
+import { useState, useEffect } from "react";
 
 export const Header = () => {
-  const { theme, setTheme } = useTheme();
+  const {theme, setTheme} = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
 
   const switchThemeMode = () => {
-    setTheme(theme === 'dark' ? 'light' : 'dark');
-  }
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
 
   return (
     <header
@@ -31,12 +42,11 @@ export const Header = () => {
           <a className={"px-0 under-bar md:px-2"}>PROFILE</a>
         </Link>
         <button className="block p-1 bg-gray-600 dark:bg-white rounded-full" onClick={switchThemeMode}>
-          {theme === 'light'
+          {theme === "light"
             ? <MoonIcon className="w-5 h-5 text-white" />
             : <SunIcon className="w-5 h-5 text-gray-600" />
           }
         </button>
-
       </div>
     </header>
   );
