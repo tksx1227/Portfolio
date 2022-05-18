@@ -1,6 +1,15 @@
 import Link from "next/link";
+import { useTheme } from "next-themes"
+import { SunIcon } from '@heroicons/react/solid';
+import { MoonIcon } from '@heroicons/react/solid';
 
 export const Header = () => {
+  const { theme, setTheme } = useTheme();
+
+  const switchThemeMode = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  }
+
   return (
     <header
       className={
@@ -21,6 +30,13 @@ export const Header = () => {
         <Link href="/#profile">
           <a className={"px-0 under-bar md:px-2"}>PROFILE</a>
         </Link>
+        <button className="block p-1 bg-gray-600 dark:bg-white rounded-full" onClick={switchThemeMode}>
+          {theme === 'light'
+            ? <MoonIcon className="w-5 h-5 text-white" />
+            : <SunIcon className="w-5 h-5 text-gray-600" />
+          }
+        </button>
+
       </div>
     </header>
   );
