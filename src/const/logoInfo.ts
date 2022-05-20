@@ -44,6 +44,7 @@ export const othersLogoList: LogoInfoType = {
     { src: "/logos/chakraui.svg", alt: "chakraui" },
     { src: "/logos/tailwindcss.svg", alt: "tailwindcss" },
     { src: "/logos/docker.svg", alt: "docker" },
+    { src: "/logos/vim.svg", alt: "vim" },
   ],
   learning: [
     { src: "/logos/unity.svg", alt: "unity" },
