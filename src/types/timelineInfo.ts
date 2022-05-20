@@ -2,7 +2,7 @@ export type TimelineInfoType = {
   title: string;
   period: {
     start: string;
-    finish: string | undefined;
+    finish?: string;
   };
   type: string;
   descriptions: string[];
