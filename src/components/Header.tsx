@@ -2,7 +2,6 @@ import Link from "next/link";
 import { useTheme } from "next-themes"
 import { SunIcon } from "@heroicons/react/solid";
 import { MoonIcon } from "@heroicons/react/solid";
-
 import { useState, useEffect } from "react";
 
 export const Header = () => {
@@ -38,15 +37,20 @@ export const Header = () => {
         <Link href="/#products">
           <a className={"px-0 under-bar md:px-2"}>PRODUCTS</a>
         </Link>
+        <Link href="/#timeline">
+          <a className={"px-0 under-bar md:px-2"}>TIMELINE</a>
+        </Link>
         <Link href="/#profile">
           <a className={"px-0 under-bar md:px-2"}>PROFILE</a>
         </Link>
-        <button className="block p-1 bg-gray-600 dark:bg-white rounded-full" onClick={switchThemeMode}>
-          {theme === "light"
-            ? <MoonIcon className="w-5 h-5 text-white" />
-            : <SunIcon className="w-5 h-5 text-gray-600" />
-          }
-        </button>
+        <div className={"md:pl-4"}>
+          <button className="block p-1 bg-gray-600 dark:bg-white rounded-full" onClick={switchThemeMode}>
+            {theme === "light"
+              ? <MoonIcon className="w-5 h-5 text-white" />
+              : <SunIcon className="w-5 h-5 text-gray-600" />
+            }
+          </button>
+        </div>
       </div>
     </header>
   );
