@@ -1,4 +1,4 @@
-import { TimelineInfoType } from "../types/timelineInfo.ts";
+import { TimelineInfoType } from "../types/timelineInfo";
 
 export const timelineInfoList: TimelineInfoType[] = [
   {
