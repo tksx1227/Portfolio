@@ -34,6 +34,15 @@ const TimelineDetail = () => {
             {timelineInfoList.map((timelineInfo: TimelineInfoType, idx: number) =>
               <TimelineCard key={timelineInfo.title} timelineInfo={timelineInfo} idx={idx} />
             )}
+            <div className={"mt-6 text-center"}>
+              <p
+                className={
+                  "inline-block bg-white bg-opacity-50 rounded shadow-lg px-12 py-4 cursor-default dark:bg-dark-base dark:shadow-dark-lg"
+                }
+              >
+                \\ 随時更新中 //
+              </p>
+            </div>
           </div>
         </section>
       </Layout>
