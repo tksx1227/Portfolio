@@ -1,4 +1,6 @@
-export const languageLogoList = {
+import { LogoInfoType } from "../types/logoInfo";
+
+export const languageLogoList: LogoInfoType = {
   available: [
     { src: "/logos/c.svg", alt: "c" },
     { src: "/logos/php.svg", alt: "php" },
@@ -17,7 +19,7 @@ export const languageLogoList = {
   ],
 };
 
-export const frameworkLogoList = {
+export const frameworkLogoList: LogoInfoType = {
   available: [
     { src: "/logos/nextjs.svg", alt: "next.js" },
     { src: "/logos/flutter.svg", alt: "flutter" },
@@ -30,7 +32,7 @@ export const frameworkLogoList = {
   ],
 };
 
-export const othersLogoList = {
+export const othersLogoList: LogoInfoType = {
   available: [
     { src: "/logos/git.svg", alt: "git" },
     { src: "/logos/figma.svg", alt: "figma" },

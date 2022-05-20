@@ -5,6 +5,7 @@ import { Skills } from "../components/Skills";
 import { Layout } from "../components/Layout";
 import { Profile } from "../components/Profile";
 import { Products } from "../components/Products";
+import { Timeline } from "../components/Timeline";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
         <Top />
         <Skills />
         <Products />
+        <Timeline />
         <Profile />
       </Layout>
     </>
