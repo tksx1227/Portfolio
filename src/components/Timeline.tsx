@@ -4,7 +4,7 @@ import { timeline } from '../cms/types/response';
 import { TimelineCard } from '../components/TimelineCard';
 
 type Props = {
-  timelineInfoList: timeline[] | undefined;
+  timelineInfoList: timeline[] | null;
 };
 
 export const Timeline = (props: Props) => {

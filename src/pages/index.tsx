@@ -11,12 +11,12 @@ import { Timeline } from '../components/Timeline';
 import { Top } from '../components/Top';
 
 type Props = {
-  timelineInfoList: timeline[] | undefined;
-  productInfoList: products[] | undefined;
+  timelineInfoList: timeline[] | null;
+  productInfoList: products[] | null;
   skillInfoStructure: {
-    languageList: skills[] | undefined;
-    frameworkList: skills[] | undefined;
-    otherList: skills[] | undefined;
+    languageList: skills[] | null;
+    frameworkList: skills[] | null;
+    otherList: skills[] | null;
   };
 };
 
@@ -44,12 +44,12 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      timelineInfoList: timelineInfo?.contents,
-      productInfoList: productInfo?.contents,
+      timelineInfoList: timelineInfo?.contents ?? null,
+      productInfoList: productInfo?.contents ?? null,
       skillInfoStructure: {
-        languageList: skillLanguageInfo?.contents,
-        frameworkList: skillFrameworkInfo?.contents,
-        otherList: skillOtherInfo?.contents,
+        languageList: skillLanguageInfo?.contents ?? null,
+        frameworkList: skillFrameworkInfo?.contents ?? null,
+        otherList: skillOtherInfo?.contents ?? null,
       },
     },
   };

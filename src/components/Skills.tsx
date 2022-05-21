@@ -3,14 +3,15 @@ import { SkillsCard } from './SkillsCard';
 
 type Props = {
   skillInfoStructure: {
-    languageList: skills[] | undefined;
-    frameworkList: skills[] | undefined;
-    otherList: skills[] | undefined;
+    languageList: skills[] | null;
+    frameworkList: skills[] | null;
+    otherList: skills[] | null;
   };
 };
 
 export const Skills = (props: Props) => {
   const { skillInfoStructure } = props;
+  const { languageList, frameworkList, otherList } = skillInfoStructure;
 
   return (
     <section id='skills' className={'mt-16 pt-8 md:mt-28'}>
@@ -22,15 +23,14 @@ export const Skills = (props: Props) => {
         className={
           'glass-container-light mt-8 px-6 py-10 space-y-16 md:px-10 dark:glass-container-dark'
         }>
-        {skillInfoStructure.languageList ? (
-          <SkillsCard title={'Languages'} skillList={skillInfoStructure.languageList} />
-        ) : null}
-        {skillInfoStructure.frameworkList ? (
-          <SkillsCard title={'Frameworks'} skillList={skillInfoStructure.frameworkList} />
-        ) : null}
-        {skillInfoStructure.otherList ? (
-          <SkillsCard title={'Others'} skillList={skillInfoStructure.otherList} />
-        ) : null}
+        {languageList ? <SkillsCard title={'Languages'} skillList={languageList} /> : null}
+        {frameworkList ? <SkillsCard title={'Frameworks'} skillList={frameworkList} /> : null}
+        {otherList ? <SkillsCard title={'Others'} skillList={otherList} /> : null}
+        {languageList || frameworkList || otherList ? null : (
+          <div className={'py-8 text-center'}>
+            <h3>有効なアイテムがありません。</h3>
+          </div>
+        )}
       </div>
     </section>
   );

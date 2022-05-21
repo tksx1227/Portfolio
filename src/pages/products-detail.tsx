@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout';
 import { ProductDetailCard } from '../components/ProductDetailCard';
 
 type Props = {
-  productInfoList: products[] | undefined;
+  productInfoList: products[] | null;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      productInfoList: productInfo?.contents,
+      productInfoList: productInfo?.contents ?? null,
     },
   };
 };
@@ -41,19 +41,25 @@ const ProductsDetail = (props: Props) => {
             className={
               'glass-container-light mt-8 mb-24 px-6 py-10 space-y-24 md:mb-48 md:px-10 md:space-y-36 dark:glass-container-dark'
             }>
-            {productInfoList
-              ? productInfoList.map((productInfo: products) => {
-                  return <ProductDetailCard key={productInfo.id} productInfo={productInfo} />;
-                })
-              : null}
-            <div className={'text-center'}>
-              <p
-                className={
-                  'inline-block bg-white bg-opacity-50 rounded shadow-lg px-12 py-4 cursor-default dark:bg-dark-base dark:shadow-dark-lg'
-                }>
-                \\ 随時更新中 //
-              </p>
-            </div>
+            {productInfoList ? (
+              productInfoList.map((productInfo: products) => {
+                return <ProductDetailCard key={productInfo.id} productInfo={productInfo} />;
+              })
+            ) : (
+              <div className={'py-8 text-center'}>
+                <h3>有効なアイテムがありません。</h3>
+              </div>
+            )}
+            {productInfoList ? (
+              <div className={'text-center'}>
+                <p
+                  className={
+                    'inline-block bg-white bg-opacity-50 rounded shadow-lg px-12 py-4 cursor-default dark:bg-dark-base dark:shadow-dark-lg'
+                  }>
+                  \\ 随時更新中 //
+                </p>
+              </div>
+            ) : null}
           </div>
         </section>
       </Layout>

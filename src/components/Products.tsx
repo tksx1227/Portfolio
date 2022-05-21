@@ -4,7 +4,7 @@ import { products } from '../cms/types/response';
 import { ProductCard } from './ProductCard';
 
 type Props = {
-  productInfoList: products[] | undefined;
+  productInfoList: products[] | null;
 };
 
 export const Products = (props: Props) => {
