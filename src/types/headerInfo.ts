@@ -1,4 +1,4 @@
 export type HeaderInfoType = {
-    title: string;
-    href: string;
+  title: string;
+  href: string;
 };
