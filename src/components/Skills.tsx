@@ -1,7 +1,17 @@
-import { languageLogoList, frameworkLogoList, othersLogoList } from '../const/logoInfo';
+import { skills } from '../cms/types/response';
 import { SkillsCard } from './SkillsCard';
 
-export const Skills = () => {
+type Props = {
+  skillInfoStructure: {
+    languageList: skills[];
+    frameworkList: skills[];
+    otherList: skills[];
+  };
+};
+
+export const Skills = (props: Props) => {
+  const { skillInfoStructure } = props;
+
   return (
     <section id='skills' className={'mt-16 pt-8 md:mt-28'}>
       <div className={'tracking-wider'}>
@@ -13,9 +23,9 @@ export const Skills = () => {
           'glass-container-light mt-8 px-6 py-10 space-y-16 md:px-10 dark:glass-container-dark'
         }
       >
-        <SkillsCard title={'Languages'} logoList={languageLogoList} />
-        <SkillsCard title={'Frameworks'} logoList={frameworkLogoList} />
-        <SkillsCard title={'Others'} logoList={othersLogoList} />
+        <SkillsCard title={'Languages'} skillList={skillInfoStructure.languageList} />
+        <SkillsCard title={'Frameworks'} skillList={skillInfoStructure.frameworkList} />
+        <SkillsCard title={'Others'} skillList={skillInfoStructure.otherList} />
       </div>
     </section>
   );

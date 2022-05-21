@@ -43,6 +43,28 @@ export type timeline<T = 'get'> = Structure<
   }
 >;
 
+export type skills<T = 'get'> = Structure<
+  T,
+  {
+    /**
+     * タイトル
+     */
+    title: string;
+    /**
+     * 画像パス
+     */
+    image_path: { url: string; width: number; height: number };
+    /**
+     * ステータス
+     */
+    status: ['available' | 'learning'];
+    /**
+     * カテゴリ
+     */
+    category: ['language' | 'framework' | 'other'];
+  }
+>;
+
 export type products<T = 'get'> = Structure<
   T,
   {
@@ -107,7 +129,7 @@ interface products_image_info {
    */
   height: number;
 }
-export interface products_tech_info {
+interface products_tech_info {
   /**
    * 技術領域
    */
@@ -121,22 +143,27 @@ export interface products_tech_info {
 export interface EndPoints {
   get: {
     timeline: timeline<'get'>;
+    skills: skills<'get'>;
     products: products<'get'>;
   };
   gets: {
     timeline: timeline<'gets'>;
+    skills: skills<'gets'>;
     products: products<'gets'>;
   };
   post: {
     timeline: timeline<'post'>;
+    skills: skills<'post'>;
     products: products<'post'>;
   };
   put: {
     timeline: timeline<'put'>;
+    skills: skills<'put'>;
     products: products<'put'>;
   };
   patch: {
     timeline: timeline<'patch'>;
+    skills: skills<'patch'>;
     products: products<'patch'>;
   };
 }

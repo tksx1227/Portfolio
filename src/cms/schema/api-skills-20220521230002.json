@@ -1,0 +1,44 @@
+{
+  "apiFields": [
+    {
+      "idValue": "TOZtabsRH3",
+      "fieldId": "title",
+      "name": "タイトル",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "image_path",
+      "name": "画像パス",
+      "kind": "media",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "status",
+      "name": "ステータス",
+      "kind": "select",
+      "required": true,
+      "selectItems": [
+        { "id": "P39FWXf1NW", "value": "available" },
+        { "id": "KNI_aMFKVq", "value": "learning" }
+      ],
+      "multipleSelect": false,
+      "isUnique": false
+    },
+    {
+      "fieldId": "category",
+      "name": "カテゴリ",
+      "kind": "select",
+      "required": true,
+      "selectItems": [
+        { "id": "9FMtbtKako", "value": "language" },
+        { "id": "Pac2FJhkGa", "value": "framework" },
+        { "id": "J9s59Ufbmg", "value": "other" }
+      ],
+      "multipleSelect": false
+    }
+  ],
+  "customFields": []
+}
