@@ -31,8 +31,7 @@ export const Header = () => {
     <header
       className={
         'font-semibold bg-white absolute w-full py-6 px-3 border-b-2 md:text-lg md:p-10 dark:bg-dark-bandle'
-      }
-    >
+      }>
       <nav className='flex justify-end'>
         <div className={'hidden justify-around md:space-x-3 md:inline-flex md:flex-row'}>
           {headerInfoList.map((headerInfo: HeaderInfoType) => {
@@ -45,8 +44,7 @@ export const Header = () => {
           <div className={'md:pl-4'}>
             <button
               className='block p-1 bg-gray-600 dark:bg-white rounded-full'
-              onClick={switchThemeMode}
-            >
+              onClick={switchThemeMode}>
               {theme === 'light' ? (
                 <MoonIcon className='w-5 h-5 text-white' />
               ) : (
@@ -67,8 +65,7 @@ export const Header = () => {
         <nav
           className={
             'transition-all absolute glass-container-light py-6 w-44 top-24 right-2 z-10 md:hidden dark:glass-container-dark'
-          }
-        >
+          }>
           <div className={'space-y-6'}>
             {headerInfoList.map((headerInfo: HeaderInfoType) => {
               return (
@@ -81,8 +78,7 @@ export const Header = () => {
             })}
             <button
               className='mx-auto block p-1 bg-gray-600 dark:bg-white rounded-full'
-              onClick={switchThemeMode}
-            >
+              onClick={switchThemeMode}>
               {theme === 'light' ? (
                 <MoonIcon className='w-5 h-5 text-white' />
               ) : (

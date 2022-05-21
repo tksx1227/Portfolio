@@ -1,0 +1,132 @@
+{
+  "apiFields": [
+    {
+      "idValue": "6zedkeNVZO",
+      "fieldId": "title",
+      "name": "タイトル",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    { "fieldId": "overview", "name": "概要", "kind": "text", "required": true, "isUnique": false },
+    {
+      "fieldId": "description",
+      "name": "説明",
+      "kind": "textArea",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "github_url",
+      "name": "GitHubのリンク",
+      "kind": "text",
+      "required": false,
+      "isUnique": false
+    },
+    {
+      "fieldId": "appeal_points",
+      "name": "アピールポイント",
+      "kind": "textArea",
+      "required": false,
+      "isUnique": false
+    },
+    { "fieldId": "period", "name": "期間", "kind": "text", "required": true, "isUnique": false },
+    {
+      "fieldId": "role",
+      "name": "役割",
+      "kind": "select",
+      "required": true,
+      "selectItems": [
+        { "id": "KeMvJR2nD7", "value": "フロントエンド" },
+        { "id": "oGc8VepLLG", "value": "デザイン" },
+        { "id": "725J-RwZIH", "value": "設計" },
+        { "id": "jBYf7QjhgC", "value": "実装" },
+        { "id": "xvxkTYSn45", "value": "バックエンド" }
+      ],
+      "multipleSelect": true
+    },
+    { "fieldId": "member_num", "name": "メンバー数", "kind": "number", "required": true },
+    {
+      "fieldId": "image_info",
+      "name": "画像情報",
+      "kind": "repeater",
+      "required": true,
+      "customFieldCreatedAt": "2022-05-21T06:02:17.935Z",
+      "customFieldCreatedAtList": ["2022-05-21T06:02:17.935Z"]
+    },
+    { "fieldId": "finished_at", "name": "完成日", "kind": "date" },
+    {
+      "fieldId": "tech_info",
+      "name": "使用技術",
+      "kind": "repeater",
+      "required": true,
+      "customFieldCreatedAt": "2022-05-21T10:25:36.767Z",
+      "customFieldCreatedAtList": ["2022-05-21T10:25:36.767Z"]
+    }
+  ],
+  "customFields": [
+    {
+      "createdAt": "2022-05-21T06:02:17.935Z",
+      "fieldId": "image_info",
+      "name": "画像情報",
+      "fields": [
+        {
+          "idValue": "z95FKnK0_d",
+          "fieldId": "path",
+          "name": "画像パス",
+          "kind": "media",
+          "required": true
+        },
+        {
+          "idValue": "vN_qjx1Ksz",
+          "fieldId": "width",
+          "name": "横幅",
+          "kind": "number",
+          "required": true
+        },
+        {
+          "idValue": "S0ZBA9c_pz",
+          "fieldId": "height",
+          "name": "縦幅",
+          "kind": "number",
+          "required": true
+        }
+      ],
+      "position": [["z95FKnK0_d", "vN_qjx1Ksz", "S0ZBA9c_pz"], []],
+      "updatedAt": "2022-05-21T06:06:40.762Z",
+      "viewerGroup": "nVc"
+    },
+    {
+      "createdAt": "2022-05-21T10:25:36.767Z",
+      "fieldId": "tech_info",
+      "name": "使用技術",
+      "fields": [
+        {
+          "idValue": "oAZQjK8wQB",
+          "fieldId": "category",
+          "name": "技術領域",
+          "kind": "select",
+          "required": true,
+          "selectItems": [
+            { "id": "NEcbO0wTvy", "value": "フロントエンド" },
+            { "id": "8OqqVjumdi", "value": "バックエンド" },
+            { "id": "yQNpHsbmIR", "value": "デザイン" },
+            { "id": "165-qvzocq", "value": "インフラ" },
+            { "id": "QKu0bAY1d3", "value": "マイコン" }
+          ],
+          "multipleSelect": false
+        },
+        {
+          "idValue": "Bg14B-sJl3",
+          "fieldId": "tech_names",
+          "name": "技術名を;で連結した文字列",
+          "kind": "text",
+          "required": true
+        }
+      ],
+      "position": [["oAZQjK8wQB", "Bg14B-sJl3"]],
+      "updatedAt": "2022-05-21T10:26:14.751Z",
+      "viewerGroup": "nVc"
+    }
+  ]
+}

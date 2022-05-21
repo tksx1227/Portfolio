@@ -1,0 +1,29 @@
+{
+  "apiFields": [
+    {
+      "idValue": "_LF6JbxGKy",
+      "fieldId": "title",
+      "name": "タイトル",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "category",
+      "name": "カテゴリ",
+      "kind": "text",
+      "required": true,
+      "isUnique": false
+    },
+    {
+      "fieldId": "description",
+      "name": "説明",
+      "kind": "textArea",
+      "required": true,
+      "isUnique": false
+    },
+    { "fieldId": "started_at", "name": "開始日時", "kind": "date", "required": true },
+    { "fieldId": "finished_at", "name": "終了日時", "kind": "date" }
+  ],
+  "customFields": []
+}
