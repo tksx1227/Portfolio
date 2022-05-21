@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image';
 
 type Props = {
   title: string;
@@ -19,73 +19,35 @@ export const SkillsCard = (props: Props) => {
 
   return (
     <div>
-      <h3
-        className={
-          "font-bold text-2xl text-indigo-900 tracking-wide pb-2 dark:text-indigo-300"
-        }
-      >
+      <h3 className={'font-bold text-2xl text-indigo-900 tracking-wide pb-2 dark:text-indigo-300'}>
         {title}
       </h3>
-      <div
-        className={
-          "h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300"
-        }
-      ></div>
-      <p className={"text-lg tracking-widest font-semibold mt-6 mb-4"}>
-        ある程度使える
-      </p>
-      <div
-        className={
-          " mb-8 text-center grid grid-cols-4 md:grid-cols-none md:flex md:flex-wrap"
-        }
-      >
+      <div className={'h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300'}></div>
+      <p className={'text-lg tracking-widest font-semibold mt-6 mb-4'}>ある程度使える</p>
+      <div className={' mb-8 text-center grid grid-cols-4 md:grid-cols-none md:flex md:flex-wrap'}>
         {logoList.available.map(({ src, alt }) => {
           return (
-            <div className="m-3" key={alt}>
-              <div className="hidden select-none md:block">
-                <Image
-                  src={src}
-                  alt={alt}
-                  title={alt}
-                  width="80"
-                  height="80"
-                ></Image>
+            <div className='m-3' key={alt}>
+              <div className='hidden select-none md:block'>
+                <Image src={src} alt={alt} title={alt} width='80' height='80'></Image>
               </div>
-              <div className="block select-none md:hidden">
-                <Image
-                  src={src}
-                  alt={alt}
-                  title={alt}
-                  width="50"
-                  height="50"
-                ></Image>
+              <div className='block select-none md:hidden'>
+                <Image src={src} alt={alt} title={alt} width='50' height='50'></Image>
               </div>
             </div>
           );
         })}
       </div>
-      <p className={"text-lg tracking-widest font-semibold mb-4"}>学習中</p>
-      <div className={"flex flex-wrap"}>
+      <p className={'text-lg tracking-widest font-semibold mb-4'}>学習中</p>
+      <div className={'flex flex-wrap'}>
         {logoList.learning.map(({ src, alt }) => {
           return (
-            <div className="m-3" key={alt}>
-              <div className="hidden select-none md:block">
-                <Image
-                  src={src}
-                  alt={alt}
-                  title={alt}
-                  width="80"
-                  height="80"
-                ></Image>
+            <div className='m-3' key={alt}>
+              <div className='hidden select-none md:block'>
+                <Image src={src} alt={alt} title={alt} width='80' height='80'></Image>
               </div>
-              <div className="block select-none md:hidden">
-                <Image
-                  src={src}
-                  alt={alt}
-                  title={alt}
-                  width="50"
-                  height="50"
-                ></Image>
+              <div className='block select-none md:hidden'>
+                <Image src={src} alt={alt} title={alt} width='50' height='50'></Image>
               </div>
             </div>
           );
