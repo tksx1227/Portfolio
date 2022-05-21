@@ -1,9 +1,15 @@
 import Link from 'next/link';
 
-import { productList } from '../const/productInfo';
+import { products } from '../cms/types/response';
 import { ProductCard } from './ProductCard';
 
-export const Products = () => {
+type Props = {
+  productInfoList: products[];
+};
+
+export const Products = (props: Props) => {
+  const { productInfoList } = props;
+
   return (
     <section id='products' className={'mt-16 pt-8 md:mt-28'}>
       <div className={'tracking-wider'}>
@@ -15,8 +21,9 @@ export const Products = () => {
           'glass-container-light mt-8 px-6 py-10 space-y-24 md:space-y-40 md:px-10 dark:glass-container-dark'
         }
       >
-        <ProductCard key={productList[0].title} isEven={true} productInfo={productList[0]} />
-        <ProductCard key={productList[1].title} isEven={false} productInfo={productList[1]} />
+        {productInfoList.map((productInfo: products, idx: number) => (
+          <ProductCard key={productInfo.id} isEven={idx % 2 === 0} productInfo={productInfo} />
+        ))}
         <div className={'text-center'}>
           <Link href='/products-detail'>
             <a

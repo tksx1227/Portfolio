@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import { client } from '../cms/client';
 
-import { timeline } from '../cms/types/response';
+import { products, timeline } from '../cms/types/response';
 import { Layout } from '../components/Layout';
 import { Products } from '../components/Products';
 import { Profile } from '../components/Profile';
@@ -12,6 +12,7 @@ import { Top } from '../components/Top';
 
 type Props = {
   timelineInfoList: timeline[];
+  productInfoList: products[];
 };
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -19,16 +20,21 @@ export const getStaticProps: GetStaticProps = async () => {
     limit: 3,
     orders: '-started_at',
   });
+  const productInfo = await client.gets('products', {
+    limit: 2,
+    orders: '-finished_at',
+  });
 
   return {
     props: {
       timelineInfoList: timelineInfo?.contents,
+      productInfoList: productInfo?.contents,
     },
   };
 };
 
 const Home = (props: Props) => {
-  const { timelineInfoList } = props;
+  const { timelineInfoList, productInfoList } = props;
 
   return (
     <>
@@ -39,7 +45,7 @@ const Home = (props: Props) => {
       <Layout>
         <Top />
         <Skills />
-        <Products />
+        <Products productInfoList={productInfoList} />
         <Timeline timelineInfoList={timelineInfoList} />
         <Profile />
       </Layout>

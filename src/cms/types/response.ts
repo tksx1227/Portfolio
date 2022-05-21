@@ -82,6 +82,14 @@ export type products<T = 'get'> = Structure<
      * 画像情報
      */
     image_info: products_image_info[];
+    /**
+     * 完成日
+     */
+    finished_at?: string;
+    /**
+     * 使用技術
+     */
+    tech_info: products_tech_info[];
   }
 >;
 
@@ -98,6 +106,16 @@ interface products_image_info {
    * 縦幅
    */
   height: number;
+}
+export interface products_tech_info {
+  /**
+   * 技術領域
+   */
+  category: ['フロントエンド' | 'バックエンド' | 'デザイン' | 'インフラ' | 'マイコン'];
+  /**
+   * 技術名を;で連結した文字列
+   */
+  tech_names: string;
 }
 
 export interface EndPoints {
