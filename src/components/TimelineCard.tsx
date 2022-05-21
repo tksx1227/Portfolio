@@ -1,19 +1,23 @@
-import { TimelineInfoType } from '../types/timelineInfo';
+import { timeline } from '../cms/types/response';
+import { plainTextToList, formatDateToUTC } from '../lib/utils';
 
 type TimelineCardType = {
-  timelineInfo: TimelineInfoType;
+  timelineInfo: timeline;
   idx: number;
 };
 
 export const TimelineCard = (props: TimelineCardType) => {
   const { timelineInfo, idx } = props;
-  const { start, finish = '' } = timelineInfo.period;
-  let period: string;
+  const startedAt = timelineInfo.started_at;
+  const finishedAt = timelineInfo.finished_at;
+  const descriptionList = plainTextToList(timelineInfo.description);
 
-  if (start === finish) {
-    period = start;
+  let period: string;
+  if (startedAt === finishedAt) {
+    period = formatDateToUTC(startedAt);
   } else {
-    period = start + ' ~ ' + finish;
+    period = formatDateToUTC(startedAt) + ' ~ ';
+    period += finishedAt ? formatDateToUTC(finishedAt) : '';
   }
 
   return (
@@ -53,7 +57,7 @@ export const TimelineCard = (props: TimelineCardType) => {
           'border-l-2 border-gray-200 pl-6 pb-20 md:ml-14 md:pl-24 md:pb-32 dark:border-gray-700'
         }
       >
-        <p className={'mb-8 text-slate-500 dark:text-gray-400'}>{timelineInfo.type}</p>
+        <p className={'mb-8 text-slate-500 dark:text-gray-400'}>{timelineInfo.category}</p>
         <h3 className={'text-indigo-700 text-2xl mb-3 font-bold dark:text-indigo-300'}>
           {timelineInfo.title}
         </h3>
@@ -61,10 +65,10 @@ export const TimelineCard = (props: TimelineCardType) => {
           className={'mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300'}
         ></div>
         <div className={'text-left md:inline-block'}>
-          {timelineInfo.descriptions.map((shortDescription) => {
+          {descriptionList.map((line) => {
             return (
-              <div key={shortDescription} className={'mt-4 leading-relaxed'}>
-                <p>{shortDescription}</p>
+              <div key={line} className={'mt-4 leading-relaxed'}>
+                <p>{line}</p>
               </div>
             );
           })}

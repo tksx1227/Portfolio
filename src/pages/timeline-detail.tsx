@@ -1,11 +1,30 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import { client } from '../cms/client';
 
+import { timeline } from '../cms/types/response';
 import { Layout } from '../components/Layout';
 import { TimelineCard } from '../components/TimelineCard';
-import { timelineInfoList } from '../const/timelineInfo';
-import { TimelineInfoType } from '../types/timelineInfo';
 
-const TimelineDetail = () => {
+type Props = {
+  timelineInfoList: timeline[];
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const timelineInfo = await client.gets('timeline', {
+    orders: '-started_at',
+  });
+
+  return {
+    props: {
+      timelineInfoList: timelineInfo?.contents,
+    },
+  };
+};
+
+const TimelineDetail = (props: Props) => {
+  const { timelineInfoList } = props;
+
   return (
     <>
       <Head>
@@ -23,8 +42,8 @@ const TimelineDetail = () => {
               'glass-container-light mt-8 mb-24 px-6 py-10 md:mb-48 md:px-10 dark:glass-container-dark'
             }
           >
-            {timelineInfoList.map((timelineInfo: TimelineInfoType, idx: number) => (
-              <TimelineCard key={timelineInfo.title} timelineInfo={timelineInfo} idx={idx} />
+            {timelineInfoList.map((timelineInfo: timeline, idx: number) => (
+              <TimelineCard key={timelineInfo.id} timelineInfo={timelineInfo} idx={idx} />
             ))}
             <div className={'mt-6 text-center'}>
               <p

@@ -1,11 +1,14 @@
 import Link from 'next/link';
 
+import { timeline } from '../cms/types/response';
 import { TimelineCard } from '../components/TimelineCard';
-import { timelineInfoList } from '../const/timelineInfo';
-import { TimelineInfoType } from '../types/timelineInfo';
 
-export const Timeline = () => {
-  const timelineInfoListShort = timelineInfoList.slice(0, 3);
+type Props = {
+  timelineInfoList: timeline[];
+};
+
+export const Timeline = (props: Props) => {
+  const { timelineInfoList } = props;
 
   return (
     <section id='timeline' className={'mt-16 pt-8 md:mt-28'}>
@@ -14,8 +17,8 @@ export const Timeline = () => {
         <h2 className={'text-2xl font-bold tracking-wider md:text-3xl'}>タイムライン</h2>
       </div>
       <div className={'glass-container-light mt-8 px-6 py-10 md:px-10 dark:glass-container-dark'}>
-        {timelineInfoListShort.map((timelineInfo: TimelineInfoType, idx: number) => (
-          <TimelineCard key={timelineInfo.title} timelineInfo={timelineInfo} idx={idx} />
+        {timelineInfoList.map((timelineInfo: timeline, idx: number) => (
+          <TimelineCard key={timelineInfo.id} timelineInfo={timelineInfo} idx={idx} />
         ))}
         <div className={'text-center md:mt-16'}>
           <Link href='/timeline-detail'>
