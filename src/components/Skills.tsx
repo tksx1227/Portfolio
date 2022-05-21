@@ -21,8 +21,7 @@ export const Skills = (props: Props) => {
       <div
         className={
           'glass-container-light mt-8 px-6 py-10 space-y-16 md:px-10 dark:glass-container-dark'
-        }
-      >
+        }>
         <SkillsCard title={'Languages'} skillList={skillInfoStructure.languageList} />
         <SkillsCard title={'Frameworks'} skillList={skillInfoStructure.frameworkList} />
         <SkillsCard title={'Others'} skillList={skillInfoStructure.otherList} />

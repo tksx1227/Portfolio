@@ -23,8 +23,9 @@ export const ProductDetailCard = (props: Props) => {
         {productInfo.title}
       </h3>
       <div
-        className={'mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300 md:mb-12'}
-      ></div>
+        className={
+          'mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300 md:mb-12'
+        }></div>
       <div className={'flex flex-col md:flex-row'}>
         <div className={'md:w-1/2 flex flex-row justify-center'}>
           <div onClick={onClickMobileImg} className={'block md:hidden'}>
@@ -61,8 +62,7 @@ export const ProductDetailCard = (props: Props) => {
               <p
                 className={
                   'block mb-6 border-b-2 border-indigo-300 md:inline-block dark:border-indigo-800'
-                }
-              >
+                }>
                 {productInfo.overview}
               </p>
               <div className={'space-y-2'}>
@@ -101,8 +101,7 @@ export const ProductDetailCard = (props: Props) => {
                     title='Github'
                     className={
                       'text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-300'
-                    }
-                  >
+                    }>
                     こちら
                   </a>
                 </p>
@@ -114,8 +113,7 @@ export const ProductDetailCard = (props: Props) => {
                     <div key={techInfo.category[0]} className={'mb-2 md:mb-4'}>
                       <p>{techInfo.category[0]}</p>
                       <ul
-                        className={'list-disc grid grid-cols-2 gap-x-6 md:gap-x-0 lg:grid-cols-3'}
-                      >
+                        className={'list-disc grid grid-cols-2 gap-x-6 md:gap-x-0 lg:grid-cols-3'}>
                         {plainTextToList(techInfo.tech_names, ';').map((techName) => {
                           return <li key={techName}>{techName}</li>;
                         })}

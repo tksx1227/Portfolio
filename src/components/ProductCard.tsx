@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import { products, products_tech_info } from '../cms/types/response';
+import { products } from '../cms/types/response';
 import { plainTextToList } from '../lib/utils';
 
 type Props = {
@@ -20,8 +20,7 @@ export const ProductCard = (props: Props) => {
         <div
           className={
             'mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300 md:mb-12'
-          }
-        ></div>
+          }></div>
       </div>
       <div className={'md:w-2/3 flex justify-center'}>
         <div>
@@ -39,8 +38,7 @@ export const ProductCard = (props: Props) => {
       <div
         className={`mt-8 leading-relaxed md:mt-0 md:w-1/3 ${
           isEven ? 'md:ml-12 md:text-left' : 'md:mr-12 md:text-right'
-        }`}
-      >
+        }`}>
         <div className={'text-left md:inline-block'}>
           <p className={'hidden text-xl text-indigo-700 font-bold md:block dark:text-indigo-300'}>
             {productInfo.title}
@@ -64,15 +62,14 @@ export const ProductCard = (props: Props) => {
                 title='Github'
                 className={
                   'text-blue-600 transition duration-200 hover:opacity-60 dark:text-blue-300'
-                }
-              >
+                }>
                 こちら
               </a>
             </p>
           )}
           <div>
             <span className={'font-bold'}>使用技術</span>：
-            {productInfo.tech_info.map((techInfo: products_tech_info) => {
+            {productInfo.tech_info.map((techInfo) => {
               return (
                 <div key={techInfo.category[0]} className={'mb-4'}>
                   <p>{techInfo.category[0]}</p>

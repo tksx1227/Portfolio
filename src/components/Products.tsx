@@ -19,8 +19,7 @@ export const Products = (props: Props) => {
       <div
         className={
           'glass-container-light mt-8 px-6 py-10 space-y-24 md:space-y-40 md:px-10 dark:glass-container-dark'
-        }
-      >
+        }>
         {productInfoList.map((productInfo: products, idx: number) => (
           <ProductCard key={productInfo.id} isEven={idx % 2 === 0} productInfo={productInfo} />
         ))}
@@ -29,8 +28,7 @@ export const Products = (props: Props) => {
             <a
               className={
                 'shadow-xl inline-block px-8 py-3 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white md:px-16 md:py-4 dark:hover:bg-gray-100'
-              }
-            >
+              }>
               もっと見る
             </a>
           </Link>

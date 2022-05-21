@@ -29,8 +29,7 @@ export const SkillsCard = (props: Props) => {
                   alt={title}
                   title={title}
                   width='80'
-                  height='80'
-                ></Image>
+                  height='80'></Image>
               </div>
               <div className='block select-none md:hidden'>
                 <Image
@@ -38,8 +37,7 @@ export const SkillsCard = (props: Props) => {
                   alt={title}
                   title={title}
                   width='50'
-                  height='50'
-                ></Image>
+                  height='50'></Image>
               </div>
             </div>
           );
@@ -56,8 +54,7 @@ export const SkillsCard = (props: Props) => {
                   alt={title}
                   title={title}
                   width='80'
-                  height='80'
-                ></Image>
+                  height='80'></Image>
               </div>
               <div className='block select-none md:hidden'>
                 <Image
@@ -65,8 +62,7 @@ export const SkillsCard = (props: Props) => {
                   alt={title}
                   title={title}
                   width='50'
-                  height='50'
-                ></Image>
+                  height='50'></Image>
               </div>
             </div>
           );

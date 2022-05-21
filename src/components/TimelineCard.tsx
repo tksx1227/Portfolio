@@ -25,8 +25,7 @@ export const TimelineCard = (props: TimelineCardType) => {
       <div
         className={`${
           idx === 0 ? null : 'hidden'
-        } border-l-2 border-gray-200 pl-6 md:ml-14 h-4 md:pl-24 md:h-8 dark:border-gray-700`}
-      ></div>
+        } border-l-2 border-gray-200 pl-6 md:ml-14 h-4 md:pl-24 md:h-8 dark:border-gray-700`}></div>
       <div className={'relative pl-6 md:ml-14 md:pl-24'}>
         <p className={'border-l-2 border-transparent text-slate-500 dark:text-gray-400'}>
           {period}
@@ -44,8 +43,7 @@ export const TimelineCard = (props: TimelineCardType) => {
             strokeLinejoin='round'
             className={
               idx === 0 ? 'text-green-400 dark:text-green-700' : 'text-gray-400 dark:text-gray-500'
-            }
-          >
+            }>
             <circle cx='17.1' cy='12.7' r='5' strokeWidth='3.0'></circle>
             <line x1='5.1' y1='12.7' x2='12.1' y2='12.7' strokeWidth='3.0'></line>
             <line x1='22.1' y1='12.7' x2='28.1' y2='12.7' strokeWidth='3.0'></line>
@@ -55,15 +53,13 @@ export const TimelineCard = (props: TimelineCardType) => {
       <div
         className={
           'border-l-2 border-gray-200 pl-6 pb-20 md:ml-14 md:pl-24 md:pb-32 dark:border-gray-700'
-        }
-      >
+        }>
         <p className={'mb-8 text-slate-500 dark:text-gray-400'}>{timelineInfo.category}</p>
         <h3 className={'text-indigo-700 text-2xl mb-3 font-bold dark:text-indigo-300'}>
           {timelineInfo.title}
         </h3>
         <div
-          className={'mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300'}
-        ></div>
+          className={'mb-6 h-0.5 bg-gradient-to-r from-indigo-400 via-blue-500 to-green-300'}></div>
         <div className={'text-left md:inline-block'}>
           {descriptionList.map((line) => {
             return (

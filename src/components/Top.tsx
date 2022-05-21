@@ -19,8 +19,7 @@ export const Top = () => {
       <div
         className={
           'glass-container-light mt-8 p-6 text-left text-sm leading-relaxed tracking-widest md:p-10 md:text-center md:text-base dark:glass-container-dark'
-        }
-      >
+        }>
         <p>地方の情報系大学4年生</p>
         <p>エンターテイメントに関する事業で活躍したい願望があります。</p>
       </div>
