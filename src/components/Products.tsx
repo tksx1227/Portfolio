@@ -4,7 +4,7 @@ import { products } from '../cms/types/response';
 import { ProductCard } from './ProductCard';
 
 type Props = {
-  productInfoList: products[];
+  productInfoList: products[] | undefined;
 };
 
 export const Products = (props: Props) => {
@@ -20,19 +20,27 @@ export const Products = (props: Props) => {
         className={
           'glass-container-light mt-8 px-6 py-10 space-y-24 md:space-y-40 md:px-10 dark:glass-container-dark'
         }>
-        {productInfoList.map((productInfo: products, idx: number) => (
-          <ProductCard key={productInfo.id} isEven={idx % 2 === 0} productInfo={productInfo} />
-        ))}
-        <div className={'text-center'}>
-          <Link href='/products-detail'>
-            <a
-              className={
-                'shadow-xl inline-block px-8 py-3 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white md:px-16 md:py-4 dark:hover:bg-gray-100'
-              }>
-              もっと見る
-            </a>
-          </Link>
-        </div>
+        {productInfoList ? (
+          productInfoList.map((productInfo: products, idx: number) => (
+            <ProductCard key={productInfo.id} isEven={idx % 2 === 0} productInfo={productInfo} />
+          ))
+        ) : (
+          <div className={'py-8 text-center'}>
+            <h3>有効なアイテムがありません。</h3>
+          </div>
+        )}
+        {productInfoList ? (
+          <div className={'text-center'}>
+            <Link href='/products-detail'>
+              <a
+                className={
+                  'shadow-xl inline-block px-8 py-3 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white md:px-16 md:py-4 dark:hover:bg-gray-100'
+                }>
+                もっと見る
+              </a>
+            </Link>
+          </div>
+        ) : null}
       </div>
     </section>
   );

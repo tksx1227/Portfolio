@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout';
 import { TimelineCard } from '../components/TimelineCard';
 
 type Props = {
-  timelineInfoList: timeline[];
+  timelineInfoList: timeline[] | undefined;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -41,9 +41,11 @@ const TimelineDetail = (props: Props) => {
             className={
               'glass-container-light mt-8 mb-24 px-6 py-10 md:mb-48 md:px-10 dark:glass-container-dark'
             }>
-            {timelineInfoList.map((timelineInfo: timeline, idx: number) => (
-              <TimelineCard key={timelineInfo.id} timelineInfo={timelineInfo} idx={idx} />
-            ))}
+            {timelineInfoList
+              ? timelineInfoList.map((timelineInfo: timeline, idx: number) => (
+                  <TimelineCard key={timelineInfo.id} timelineInfo={timelineInfo} idx={idx} />
+                ))
+              : null}
             <div className={'mt-6 text-center'}>
               <p
                 className={

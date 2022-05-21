@@ -7,7 +7,7 @@ import { Layout } from '../components/Layout';
 import { ProductDetailCard } from '../components/ProductDetailCard';
 
 type Props = {
-  productInfoList: products[];
+  productInfoList: products[] | undefined;
 };
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -41,9 +41,11 @@ const ProductsDetail = (props: Props) => {
             className={
               'glass-container-light mt-8 mb-24 px-6 py-10 space-y-24 md:mb-48 md:px-10 md:space-y-36 dark:glass-container-dark'
             }>
-            {productInfoList.map((productInfo: products) => {
-              return <ProductDetailCard key={productInfo.id} productInfo={productInfo} />;
-            })}
+            {productInfoList
+              ? productInfoList.map((productInfo: products) => {
+                  return <ProductDetailCard key={productInfo.id} productInfo={productInfo} />;
+                })
+              : null}
             <div className={'text-center'}>
               <p
                 className={

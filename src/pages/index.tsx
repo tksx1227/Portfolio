@@ -11,12 +11,12 @@ import { Timeline } from '../components/Timeline';
 import { Top } from '../components/Top';
 
 type Props = {
-  timelineInfoList: timeline[];
-  productInfoList: products[];
+  timelineInfoList: timeline[] | undefined;
+  productInfoList: products[] | undefined;
   skillInfoStructure: {
-    languageList: skills[];
-    frameworkList: skills[];
-    otherList: skills[];
+    languageList: skills[] | undefined;
+    frameworkList: skills[] | undefined;
+    otherList: skills[] | undefined;
   };
 };
 
