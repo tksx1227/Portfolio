@@ -1,4 +1,4 @@
-import { SunIcon, MoonIcon, MenuIcon } from '@heroicons/react/solid';
+import { SunIcon, MoonIcon, Bars3Icon } from '@heroicons/react/24/solid';
 import { useTheme } from 'next-themes';
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -57,7 +57,7 @@ export const Header = () => {
       <div>
         <div className='flex justify-end md:hidden'>
           <button onClick={switchMenu} className='flex-initial'>
-            <MenuIcon className='w-8 h-8' />
+            <Bars3Icon className='w-8 h-8' />
           </button>
         </div>
       </div>

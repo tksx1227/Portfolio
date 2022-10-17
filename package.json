@@ -13,8 +13,8 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.12",
-    "eslint-config-prettier": "^8.5.0",
     "dayjs": "^1.11.5",
+    "eslint-config-prettier": "^8.5.0",
     "microcms-js-sdk": "^2.2.1",
     "microcms-lib": "^1.0.4",
     "next": "^12.3.1",
@@ -26,7 +26,6 @@
   "devDependencies": {
     "@types/node": "^18.8.3",
     "@types/react": "^18.0.21",
-
     "autoprefixer": "^10.4.12",
     "eslint": "8.25.0",
     "eslint-config-next": "12.3.1",
