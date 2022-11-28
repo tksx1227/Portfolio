@@ -15,7 +15,7 @@
     "@heroicons/react": "^2.0.12",
     "dayjs": "^1.11.6",
     "eslint-config-prettier": "^8.5.0",
-    "microcms-js-sdk": "^2.3.0",
+    "microcms-js-sdk": "^2.3.2",
     "microcms-lib": "^1.0.4",
     "next": "^13.0.5",
     "next-themes": "^0.2.1",
