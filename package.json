@@ -32,6 +32,6 @@
     "microcms-typescript": "^1.0.14",
     "postcss": "^8.4.23",
     "tailwindcss": "^3.2.7",
-    "typescript": "^5.0.3"
+    "typescript": "^5.0.4"
   }
 }
