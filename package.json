@@ -12,7 +12,7 @@
     "gen:types": "npx microcms-typescript src/cms/schema src/cms/types/response.ts"
   },
   "dependencies": {
-    "@heroicons/react": "^2.0.17",
+    "@heroicons/react": "^2.0.18",
     "dayjs": "^1.11.7",
     "eslint-config-prettier": "^8.5.0",
     "microcms-js-sdk": "^2.3.3",
