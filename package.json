@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
-    "dayjs": "^1.11.7",
+    "dayjs": "^1.11.8",
     "eslint-config-prettier": "^8.8.0",
     "microcms-js-sdk": "^2.3.3",
     "microcms-lib": "^1.0.4",
