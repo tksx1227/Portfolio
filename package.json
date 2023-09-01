@@ -14,7 +14,7 @@
   "dependencies": {
     "@heroicons/react": "^2.0.18",
     "dayjs": "^1.11.9",
-    "eslint-config-prettier": "^8.9.0",
+    "eslint-config-prettier": "^9.0.0",
     "microcms-js-sdk": "^2.5.0",
     "microcms-lib": "^1.0.4",
     "next": "^13.2.2",
