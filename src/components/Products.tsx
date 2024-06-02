@@ -31,13 +31,14 @@ export const Products = (props: Props) => {
         )}
         {productInfoList ? (
           <div className={'text-center'}>
-            <Link href='/products-detail'>
-              <a
-                className={
-                  'shadow-xl inline-block px-8 py-3 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white md:px-16 md:py-4 dark:hover:bg-gray-100'
-                }>
+            <Link
+              href='/products-detail'
+              className={
+                'shadow-xl inline-block px-8 py-3 rounded-full transition duration-300 bg-indigo-500 text-white hover:text-indigo-500 hover:bg-white md:px-16 md:py-4 dark:hover:bg-gray-100'
+              }>
+              
                 もっと見る
-              </a>
+              
             </Link>
           </div>
         ) : null}

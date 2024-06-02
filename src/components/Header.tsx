@@ -36,8 +36,11 @@ export const Header = () => {
         <div className={'hidden justify-around md:space-x-3 md:inline-flex md:flex-row'}>
           {headerInfoList.map((headerInfo: HeaderInfoType) => {
             return (
-              <Link key={headerInfo.title} href={headerInfo.href}>
-                <a className={'px-0 under-bar md:px-2'}>{headerInfo.title}</a>
+              <Link
+                key={headerInfo.title}
+                href={headerInfo.href}
+                className={'px-0 under-bar md:px-2'}>
+                {headerInfo.title}
               </Link>
             );
           })}
@@ -71,7 +74,7 @@ export const Header = () => {
               return (
                 <div key={headerInfo.title} className={'text-center'} onClick={switchMenu}>
                   <Link href={headerInfo.href}>
-                    <a>{headerInfo.title}</a>
+                    {headerInfo.title}
                   </Link>
                 </div>
               );
